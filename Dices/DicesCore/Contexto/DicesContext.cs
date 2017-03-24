@@ -19,5 +19,9 @@ namespace DicesCore.Contexto
         public DbSet<Personagem> Personagens { get; set; }
         public DbSet<Classe> Classes { get; set; }
         public DbSet<SubClasse> SubClasses { get; set; }
+        public DbSet<Formula> Formulas { get; set; }
+        public DbSet<ItemMidia> ItensMidia { get; set; }
+        public DbSet<NoteBook> NoteBooks { get; set; }
+        public DbSet<PlayList> PlayLists { get; set; }
     }
 }

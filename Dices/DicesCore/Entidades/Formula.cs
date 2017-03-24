@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Windows.Forms;
+using DicesCore.ObjetosDeValor;
 
 namespace DicesCore.Entidades
 {
@@ -11,12 +12,10 @@ namespace DicesCore.Entidades
 
         [Required]
         public string Expressao { get; set; }
-
-        [MaxLength(12)]
-        public string CorTexto { get; set; }
-
-        [MaxLength(12)]
-        public string CorFundo { get; set; }
+        
+        public Cor CorTexto { get; set; }
+        
+        public Cor CorFundo { get; set; }
 
         public Keys Atalho { get; set; }
 

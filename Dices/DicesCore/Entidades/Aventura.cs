@@ -13,9 +13,7 @@ namespace DicesCore.Entidades
         public string Descricao { get; set; }
 
         public DateTime Criacao { get; set; }
-
-        public DateTime Alteracao { get; set; }
-
+        
         public byte[] Icone { get; set; }
 
 

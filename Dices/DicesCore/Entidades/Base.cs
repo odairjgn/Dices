@@ -5,6 +5,6 @@ namespace DicesCore.Entidades
     public class Base
     {
         [Key]
-        public long Id { get; set; }
+        public int Id { get; set; }
     }
 }
