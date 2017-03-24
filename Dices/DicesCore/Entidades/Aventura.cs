@@ -19,7 +19,9 @@ namespace DicesCore.Entidades
         public byte[] Icone { get; set; }
 
 
-        public ICollection<Personagem> Personagens { get; set; }
+        public virtual ICollection<Formula> Formulas { get; set; }
+
+        public virtual ICollection<Personagem> Personagens { get; set; }
 
         protected Aventura()
         {

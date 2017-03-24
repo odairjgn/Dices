@@ -6,6 +6,7 @@ namespace DicesCore.Entidades
     public class Classe : Base
     {
         [MaxLength(50)]
+        [Required]
         public string Nome { get; set; }
 
         public string Descricao { get; set; }

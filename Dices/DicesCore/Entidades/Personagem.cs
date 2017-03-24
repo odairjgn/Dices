@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DicesCore.Entidades
 {
@@ -12,6 +13,8 @@ namespace DicesCore.Entidades
 
 
         public virtual Aventura Aventura { get; set; }
+
+        public virtual ICollection<Formula> Formulas { get; set; }
 
         protected Personagem()
         {
