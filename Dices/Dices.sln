@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dices", "Dices\Dices.csproj", "{69D109F8-FD3B-48AB-AC69-A138CFF053DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DicesCore", "DicesCore\DicesCore.csproj", "{63732E0A-51FE-40E5-80CF-BF0539EDFB1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DicesCustomControls", "DicesCustomControls\DicesCustomControls.csproj", "{509126AC-9DA7-41D0-AA72-288601F5808A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{69D109F8-FD3B-48AB-AC69-A138CFF053DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69D109F8-FD3B-48AB-AC69-A138CFF053DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69D109F8-FD3B-48AB-AC69-A138CFF053DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63732E0A-51FE-40E5-80CF-BF0539EDFB1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63732E0A-51FE-40E5-80CF-BF0539EDFB1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63732E0A-51FE-40E5-80CF-BF0539EDFB1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63732E0A-51FE-40E5-80CF-BF0539EDFB1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{509126AC-9DA7-41D0-AA72-288601F5808A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{509126AC-9DA7-41D0-AA72-288601F5808A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{509126AC-9DA7-41D0-AA72-288601F5808A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{509126AC-9DA7-41D0-AA72-288601F5808A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
