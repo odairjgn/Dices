@@ -14,5 +14,7 @@ namespace DicesCore.Entidades
         protected ItemMidia() { }
 
         public virtual PlayList Playlist { get; set; }
+
+        public virtual Pagina Pagina { get; set; }
     }
 }

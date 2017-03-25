@@ -23,5 +23,7 @@ namespace DicesCore.Contexto
         public DbSet<ItemMidia> ItensMidia { get; set; }
         public DbSet<NoteBook> NoteBooks { get; set; }
         public DbSet<PlayList> PlayLists { get; set; }
+        public DbSet<Pagina> Paginas { get; set; }
+        public DbSet<Configuracao> Configuracoes { get; set; }
     }
 }

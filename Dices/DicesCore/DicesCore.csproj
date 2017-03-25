@@ -59,21 +59,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto\DicesContext.cs" />
+    <Compile Include="Contexto\Repositorio.cs" />
     <Compile Include="Entidades\Base.cs" />
     <Compile Include="Entidades\Aventura.cs" />
     <Compile Include="Entidades\Classe.cs" />
+    <Compile Include="Entidades\Configuracao.cs" />
     <Compile Include="Entidades\DatabaseFile.cs" />
     <Compile Include="Entidades\Formula.cs" />
     <Compile Include="Entidades\ItemMidia.cs" />
     <Compile Include="Entidades\LocalFile.cs" />
     <Compile Include="Entidades\NoteBook.cs" />
+    <Compile Include="Entidades\Pagina.cs" />
     <Compile Include="Entidades\Personagem.cs" />
     <Compile Include="Entidades\PlayList.cs" />
     <Compile Include="Entidades\SubClasse.cs" />
     <Compile Include="Entidades\WebLink.cs" />
-    <Compile Include="Migrations\201703241857501_V1.cs" />
-    <Compile Include="Migrations\201703241857501_V1.Designer.cs">
-      <DependentUpon>201703241857501_V1.cs</DependentUpon>
+    <Compile Include="Migrations\201703252315125_V1.cs" />
+    <Compile Include="Migrations\201703252315125_V1.Designer.cs">
+      <DependentUpon>201703252315125_V1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ObjetosDeValor\Cor.cs" />
@@ -85,8 +88,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703241857501_V1.resx">
-      <DependentUpon>201703241857501_V1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703252315125_V1.resx">
+      <DependentUpon>201703252315125_V1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
