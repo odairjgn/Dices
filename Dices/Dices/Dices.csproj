@@ -98,6 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DicesApp\DicesApp.csproj">
+      <Project>{29104f02-75cd-4fb7-a8dd-9a724ab7fac3}</Project>
+      <Name>DicesApp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DicesCore\DicesCore.csproj">
       <Project>{63732e0a-51fe-40e5-80cf-bf0539edfb1d}</Project>
       <Name>DicesCore</Name>
