@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Dices.Forms.Inputs;
 
 namespace Dices
 {
@@ -13,7 +14,7 @@ namespace Dices
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmCalc());
         }
     }
 }

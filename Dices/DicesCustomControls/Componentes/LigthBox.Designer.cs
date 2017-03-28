@@ -1,6 +1,8 @@
-﻿namespace Dices
+﻿using System.Windows.Forms;
+
+namespace DicesCustomControls.Componentes
 {
-    partial class Form1
+    partial class LigthBox<T> where T : Form
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +32,21 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // LigthBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "LigthBox";
+            this.Opacity = 0.5D;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.Text = "LigthBox";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.LigthBox_Load);
             this.ResumeLayout(false);
 
         }
@@ -45,4 +54,3 @@
         #endregion
     }
 }
-
