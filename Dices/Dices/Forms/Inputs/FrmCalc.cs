@@ -51,7 +51,7 @@ namespace Dices.Forms.Inputs
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtInput.Clear();
-            
+
             if (!txtInput.Focused)
                 txtInput.Focus();
         }
@@ -71,7 +71,7 @@ namespace Dices.Forms.Inputs
                 txtInput.Backspace();
             }
         }
-        
+
         private void btnDecimal_Click(object sender, EventArgs e)
         {
             txtInput.InsertText(".");
@@ -169,12 +169,20 @@ namespace Dices.Forms.Inputs
 
         private void btnEq_Click(object sender, EventArgs e)
         {
-            var exp = new Expressao(txtInput.Text);
+            try
+            {
+                var exp = new Expressao(txtInput.Text);
 
-            string saida;
-            ErrorLabel = !exp.ProcessarCalc(out saida);
+                string saida;
+                ErrorLabel = !exp.ProcessarCalc(out saida);
 
-            lbResult.Text = saida;
+                lbResult.Text = saida;
+            }
+            catch (Exception ex)
+            {
+                ErrorLabel = true;
+                lbResult.Text = ex.Message;
+            }
         }
     }
 }
