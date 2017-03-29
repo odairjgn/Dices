@@ -62,6 +62,7 @@
     <Compile Include="Enums\EDockSide.cs" />
     <Compile Include="Enums\EDropState.cs" />
     <Compile Include="Enums\IntesidadeLigthBox.cs" />
+    <Compile Include="Extentions\InputExtensions.cs" />
     <Compile Include="ObjetosDeValor\StringList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

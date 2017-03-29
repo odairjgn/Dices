@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="Extentions\FormulasExtentions.cs" />
     <Compile Include="Global.cs" />
-    <Compile Include="ObjetosDeValor\Formula.cs" />
+    <Compile Include="ObjetosDeValor\Expressao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicos\ProcessadorDeFormulas.cs" />
   </ItemGroup>
