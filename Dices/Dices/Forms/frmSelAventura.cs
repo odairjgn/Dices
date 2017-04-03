@@ -11,6 +11,8 @@ namespace Dices.Forms
     {
         private Repositorio<Aventura> _aventuraContexto;
 
+        public int Id { get; private set; }
+
         public frmSelAventura()
         {
             InitializeComponent();
@@ -60,12 +62,57 @@ namespace Dices.Forms
             CarregarItens();
         }
 
-        private void lvAventuras_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void btnAbrir_Click(object sender, System.EventArgs e)
         {
-            if(lvAventuras.SelectedItems.Count <= 0) return;
+            if (lvAventuras.SelectedItems.Count <= 0)
+            {
+                MessageBox.Show("Selecione um item!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
             var key = lvAventuras.SelectedItems[0].ImageKey;
-            MessageBox.Show(key);
+            Id = int.Parse(key);
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+
+        private void btnApagar_Click(object sender, System.EventArgs e)
+        {
+            if (lvAventuras.SelectedItems.Count <= 0)
+            {
+                MessageBox.Show("Selecione um item!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var key = lvAventuras.SelectedItems[0].ImageKey;
+            var item = _aventuraContexto.Get(int.Parse(key));
+
+            if (MessageBox.Show($"Deseja apagar o registro selecionado? (A OPERAÇÃO NÃO PODE SER DEFEITA!!!)\n\n{item.Titulo}", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                _aventuraContexto.Delete(item);
+            }
+
+            CarregarItens();
+        }
+
+        private void btnEditar_Click(object sender, System.EventArgs e)
+        {
+            if (lvAventuras.SelectedItems.Count <= 0)
+            {
+                MessageBox.Show("Selecione um item!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var key = lvAventuras.SelectedItems[0].ImageKey;
+            var item = _aventuraContexto.Get(int.Parse(key));
+
+            var f = new frmEditAventura(item);
+
+            if (f.ShowDialog() != DialogResult.OK) return;
+
+            item = f.Aventura;
+            _aventuraContexto.AddOrUpdate(item);
+            CarregarItens();
         }
     }
 }

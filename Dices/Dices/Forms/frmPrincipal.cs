@@ -1,20 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using DicesCore.Contexto;
+using DicesCore.Entidades;
 
 namespace Dices.Forms
 {
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal()
+        private Repositorio<Aventura> _aventuraRepositorio;
+
+        private Aventura _aventura;
+
+        public frmPrincipal(int idAventura)
         {
             InitializeComponent();
+            _aventuraRepositorio = new Repositorio<Aventura>(Program.Contexto);
+            _aventura = _aventuraRepositorio.Get(idAventura);
+        }
+
+        private void frmPrincipal_Load(object sender, System.EventArgs e)
+        {
+            Text = $"Dices: {_aventura.Titulo}";
         }
     }
 }

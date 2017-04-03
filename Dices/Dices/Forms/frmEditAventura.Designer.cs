@@ -119,7 +119,7 @@
             // ofdImg
             // 
             this.ofdImg.FileName = "openFileDialog1";
-            this.ofdImg.Filter = "Imagens|*.jpg;*.png;*.bmp;*.gif";
+            this.ofdImg.Filter = "Imagens|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
             // 
             // btnRemoveImg
             // 

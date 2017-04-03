@@ -44,7 +44,6 @@
             this.lvAventuras.Size = new System.Drawing.Size(537, 294);
             this.lvAventuras.TabIndex = 0;
             this.lvAventuras.UseCompatibleStateImageBehavior = false;
-            this.lvAventuras.SelectedIndexChanged += new System.EventHandler(this.lvAventuras_SelectedIndexChanged);
             // 
             // btnAbrir
             // 
@@ -54,6 +53,7 @@
             this.btnAbrir.TabIndex = 1;
             this.btnAbrir.Text = "Abrir";
             this.btnAbrir.UseVisualStyleBackColor = true;
+            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
             // btnCancelar
             // 
@@ -83,6 +83,7 @@
             this.btnEditar.TabIndex = 4;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnApagar
             // 
@@ -92,6 +93,7 @@
             this.btnApagar.TabIndex = 5;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // frmSelAventura
             // 

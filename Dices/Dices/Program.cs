@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using Dices.Forms;
-using Dices.Forms.Inputs;
 using DicesCore.Contexto;
 
 namespace Dices
@@ -16,10 +15,23 @@ namespace Dices
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            try
+            {
 
-            Contexto = new DicesContext();
+                Contexto = new DicesContext();
 
-            Application.Run(new frmSelAventura());
+                var selAvt = new frmSelAventura();
+
+                if (selAvt.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new frmPrincipal(selAvt.Id));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro não tratado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public static DicesCore.Contexto.DicesContext Contexto { get; set; }
