@@ -31,14 +31,13 @@ namespace Dices.Forms
             lvAventuras.LargeImageList.Images.Clear();
 
             var aventuras = _aventuraContexto.GetAll().ToList();
-            var indexImg = -1;
 
 
             foreach (var av in aventuras)
             {
                 lvAventuras.LargeImageList.Images.Add(av.Id.ToString(), av.Icone == null ? Properties.Resources.DefaultAdventure : Image.FromStream(stream: new MemoryStream(av.Icone)));
                 var lvi = new ListViewItem(av.Titulo);
-                lvi.ImageIndex = ++indexImg;
+                lvi.ImageKey = av.Id.ToString();
                 lvi.ToolTipText = av.Descricao;
                 lvAventuras.Items.Add(lvi);
             }
@@ -59,6 +58,14 @@ namespace Dices.Forms
             var av = frm.Aventura;
             _aventuraContexto.AddOrUpdate(av);
             CarregarItens();
+        }
+
+        private void lvAventuras_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            if(lvAventuras.SelectedItems.Count <= 0) return;
+
+            var key = lvAventuras.SelectedItems[0].ImageKey;
+            MessageBox.Show(key);
         }
     }
 }

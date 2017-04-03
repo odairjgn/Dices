@@ -39,10 +39,12 @@
             // lvAventuras
             // 
             this.lvAventuras.Location = new System.Drawing.Point(12, 12);
+            this.lvAventuras.MultiSelect = false;
             this.lvAventuras.Name = "lvAventuras";
             this.lvAventuras.Size = new System.Drawing.Size(537, 294);
             this.lvAventuras.TabIndex = 0;
             this.lvAventuras.UseCompatibleStateImageBehavior = false;
+            this.lvAventuras.SelectedIndexChanged += new System.EventHandler(this.lvAventuras_SelectedIndexChanged);
             // 
             // btnAbrir
             // 
