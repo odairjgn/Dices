@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System.Linq;
+using System.Windows.Forms;
+using Dices.Forms.Inputs;
 using DicesCore.Contexto;
 using DicesCore.Entidades;
 
@@ -20,6 +22,18 @@ namespace Dices.Forms
         private void frmPrincipal_Load(object sender, System.EventArgs e)
         {
             Text = $"Dices: {_aventura.Titulo}";
+        }
+
+        private void toolStripButton1_Click(object sender, System.EventArgs e)
+        {
+            if (Application.OpenForms.Cast<Form>().Any(f => f is FrmCalc))
+            {
+                var form = Application.OpenForms.Cast<Form>().First(f => f is FrmCalc);
+                form.Focus();
+                return;
+            }
+
+            new FrmCalc().ShowDialog();
         }
     }
 }

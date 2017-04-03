@@ -151,6 +151,9 @@
   <ItemGroup>
     <None Include="Resources\DefaultAdventure.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalculadoraIco.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

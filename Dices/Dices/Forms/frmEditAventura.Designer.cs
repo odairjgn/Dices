@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pbImg = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnBuscaImg = new System.Windows.Forms.Button();
             this.ofdImg = new System.Windows.Forms.OpenFileDialog();
             this.btnRemoveImg = new System.Windows.Forms.Button();
+            this.pbImg = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,16 +78,6 @@
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Descrição";
-            // 
-            // pbImg
-            // 
-            this.pbImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbImg.Location = new System.Drawing.Point(16, 176);
-            this.pbImg.Name = "pbImg";
-            this.pbImg.Size = new System.Drawing.Size(100, 91);
-            this.pbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImg.TabIndex = 4;
-            this.pbImg.TabStop = false;
             // 
             // label3
             // 
@@ -131,6 +123,16 @@
             this.btnRemoveImg.UseVisualStyleBackColor = true;
             this.btnRemoveImg.Click += new System.EventHandler(this.btnRemoveImg_Click);
             // 
+            // pbImg
+            // 
+            this.pbImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbImg.Location = new System.Drawing.Point(16, 176);
+            this.pbImg.Name = "pbImg";
+            this.pbImg.Size = new System.Drawing.Size(100, 91);
+            this.pbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImg.TabIndex = 4;
+            this.pbImg.TabStop = false;
+            // 
             // frmEditAventura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,5 +171,6 @@
         private System.Windows.Forms.Button btnBuscaImg;
         private System.Windows.Forms.OpenFileDialog ofdImg;
         private System.Windows.Forms.Button btnRemoveImg;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

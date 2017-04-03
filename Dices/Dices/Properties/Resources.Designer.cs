@@ -63,6 +63,16 @@ namespace Dices.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CalculadoraIco {
+            get {
+                object obj = ResourceManager.GetObject("CalculadoraIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DefaultAdventure {
             get {
                 object obj = ResourceManager.GetObject("DefaultAdventure", resourceCulture);
