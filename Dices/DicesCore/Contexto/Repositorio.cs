@@ -12,9 +12,9 @@ namespace DicesCore.Contexto
     {
         private DicesContext _context;
 
-        public Repositorio()
+        public Repositorio(DicesContext contexto)
         {
-            _context = new DicesContext();
+            _context = contexto;
         }
 
         public IEnumerable<TEntity> GetAll()

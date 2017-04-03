@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dices.Forms;
-using Dices.Forms.Inputs;
-using DicesCore.Contexto;
 
-namespace Dices
+namespace WindowsFormsApplication1
 {
     static class Program
     {
@@ -16,12 +16,7 @@ namespace Dices
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            Contexto = new DicesContext();
-
-            Application.Run(new frmSelAventura());
+            Application.Run(new Form1());
         }
-
-        public static DicesCore.Contexto.DicesContext Contexto { get; set; }
     }
 }

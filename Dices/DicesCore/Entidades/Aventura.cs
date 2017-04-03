@@ -25,5 +25,13 @@ namespace DicesCore.Entidades
         {
             
         }
+
+        public Aventura(string titulo, string descricao, DateTime criacao, byte[] icone)
+        {
+            Titulo = titulo;
+            Descricao = descricao;
+            Criacao = criacao;
+            Icone = icone;
+        }
     }
 }
