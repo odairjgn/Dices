@@ -18,7 +18,7 @@ namespace Dices
             try
             {
 
-                Contexto = new DicesContext();
+                DicesApp.Global.Contexto = new DicesContext();
 
                 var selAvt = new frmSelAventura();
 
@@ -34,6 +34,6 @@ namespace Dices
             }
         }
 
-        public static DicesCore.Contexto.DicesContext Contexto { get; set; }
+
     }
 }

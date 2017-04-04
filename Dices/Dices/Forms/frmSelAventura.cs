@@ -16,7 +16,7 @@ namespace Dices.Forms
         public frmSelAventura()
         {
             InitializeComponent();
-            _aventuraContexto = new Repositorio<Aventura>(Program.Contexto);
+            _aventuraContexto = new Repositorio<Aventura>(DicesApp.Global.Contexto);
         }
 
         private void frmSelAventura_Load(object sender, System.EventArgs e)

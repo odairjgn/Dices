@@ -15,7 +15,7 @@ namespace Dices.Forms
         public frmPrincipal(int idAventura)
         {
             InitializeComponent();
-            _aventuraRepositorio = new Repositorio<Aventura>(Program.Contexto);
+            _aventuraRepositorio = new Repositorio<Aventura>(DicesApp.Global.Contexto);
             _aventura = _aventuraRepositorio.Get(idAventura);
         }
 

@@ -15,6 +15,7 @@ namespace DicesCore.Entidades
         public virtual Aventura Aventura { get; set; }
 
         public virtual ICollection<Formula> Formulas { get; set; }
+        public virtual ICollection<Variavel> Variaveis { get; set; }
 
         protected Personagem()
         {
