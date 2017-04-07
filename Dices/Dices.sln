@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dices", "Dices\Dices.csproj", "{69D109F8-FD3B-48AB-AC69-A138CFF053DE}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DicesCustomControls", "DicesCustomControls\DicesCustomControls.csproj", "{509126AC-9DA7-41D0-AA72-288601F5808A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DicesApp", "DicesApp\DicesApp.csproj", "{29104F02-75CD-4FB7-A8DD-9A724AB7FAC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Terceiros", "Terceiros", "{8A854968-E9EC-4961-A2F3-0D0630F9873C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

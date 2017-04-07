@@ -20,6 +20,8 @@ namespace Dices
 
                 DicesApp.Global.Contexto = new DicesContext();
 
+                new Teste().ShowDialog();
+
                 var selAvt = new frmSelAventura();
 
                 if (selAvt.ShowDialog() == DialogResult.OK)
