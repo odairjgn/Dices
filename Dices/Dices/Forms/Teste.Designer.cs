@@ -28,22 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.htmlEditor1 = new DicesCustomControls.Componentes.HtmlEditor();
             this.SuspendLayout();
-            // 
-            // htmlEditor1
-            // 
-            this.htmlEditor1.Location = new System.Drawing.Point(50, 26);
-            this.htmlEditor1.Name = "htmlEditor1";
-            this.htmlEditor1.Size = new System.Drawing.Size(698, 413);
-            this.htmlEditor1.TabIndex = 0;
             // 
             // Teste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 451);
-            this.Controls.Add(this.htmlEditor1);
             this.Name = "Teste";
             this.Text = "Teste";
             this.ResumeLayout(false);
@@ -51,7 +42,5 @@
         }
 
         #endregion
-
-        private DicesCustomControls.Componentes.HtmlEditor htmlEditor1;
     }
 }

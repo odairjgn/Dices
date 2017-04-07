@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using DicesCustomControls.Componentes.Internos;
 using DicesCustomControls.Enums;
-using ObjetivaPDVComponentes.Parciais;
 
 namespace DicesCustomControls.Componentes
 {

@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using DicesCustomControls.Enums;
 
-namespace ObjetivaPDVComponentes.Parciais
+namespace DicesCustomControls.Componentes.Internos
 {
     public partial class DropDownControl : UserControl
     {

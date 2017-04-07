@@ -1,4 +1,4 @@
-﻿namespace ObjetivaPDVComponentes.Parciais
+﻿namespace DicesCustomControls.Componentes.Internos
 {
     partial class DropDownControl
     {

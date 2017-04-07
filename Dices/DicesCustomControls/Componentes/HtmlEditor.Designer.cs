@@ -1,4 +1,8 @@
-﻿namespace DicesCustomControls.Componentes
+﻿using System.Windows.Forms;
+using DicesCustomControls.Componentes.Internos;
+using LiveSwitch.TextControl;
+
+namespace DicesCustomControls.Componentes
 {
     partial class HtmlEditor
     {
@@ -29,7 +33,7 @@
         private void InitializeComponent()
         {
             this.pnBase = new System.Windows.Forms.TableLayoutPanel();
-            this.HTML_Editor = new GvS.Controls.HtmlTextbox();
+            this.dropDownControl1 = new Editor();
             this.pnBase.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -37,7 +41,7 @@
             // 
             this.pnBase.ColumnCount = 1;
             this.pnBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnBase.Controls.Add(this.HTML_Editor, 0, 0);
+            this.pnBase.Controls.Add(this.dropDownControl1, 0, 0);
             this.pnBase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnBase.Location = new System.Drawing.Point(0, 0);
             this.pnBase.Name = "pnBase";
@@ -48,26 +52,13 @@
             this.pnBase.Size = new System.Drawing.Size(567, 327);
             this.pnBase.TabIndex = 0;
             // 
-            // HTML_Editor
+            // dropDownControl1
             // 
-            this.HTML_Editor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HTML_Editor.Fonts = new string[] {
-        "Corbel",
-        "Corbel, Verdana, Arial, Helvetica, sans-serif",
-        "Georgia, Times New Roman, Times, serif",
-        "Consolas, Courier New, Courier, monospace"};
-            this.HTML_Editor.IllegalPatterns = new string[] {
-        "<script.*?>",
-        "<\\w+\\s+.*?(j|java|vb|ecma)script:.*?>",
-        "<\\w+(\\s+|\\s+.*?\\s+)on\\w+\\s*=.+?>",
-        "</?input.*?>"};
-            this.HTML_Editor.Location = new System.Drawing.Point(1, 1);
-            this.HTML_Editor.Margin = new System.Windows.Forms.Padding(1);
-            this.HTML_Editor.Name = "HTML_Editor";
-            this.HTML_Editor.ShowHtmlSource = false;
-            this.HTML_Editor.Size = new System.Drawing.Size(565, 325);
-            this.HTML_Editor.TabIndex = 0;
-            this.HTML_Editor.ToolbarStyle = GvS.Controls.ToolbarStyles.AlwaysInternal;
+            this.dropDownControl1.BackColor = System.Drawing.Color.White;
+            this.dropDownControl1.Location = new System.Drawing.Point(3, 3);
+            this.dropDownControl1.Name = "dropDownControl1";
+            this.dropDownControl1.Size = new System.Drawing.Size(150, 150);
+            this.dropDownControl1.TabIndex = 0;
             // 
             // HtmlEditor
             // 
@@ -84,6 +75,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel pnBase;
-        private GvS.Controls.HtmlTextbox HTML_Editor;
+        private Editor dropDownControl1;
     }
 }
