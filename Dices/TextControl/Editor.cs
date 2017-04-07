@@ -1,16 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using mshtml;
-using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Web;
-using System.Threading;
 using System.Net.Mail;
 using System.Net.Mime;
 
@@ -46,10 +42,8 @@ namespace LiveSwitch.TextControl
 
         public Editor()
         {
-#if TRIAL
-            var form = new SplashForm();
-            form.ShowDialog();
-#endif
+            CheckForIllegalCrossThreadCalls = false;
+
             Load += new EventHandler(Editor_Load);
             InitializeComponent();
             SetupEvents();
@@ -772,14 +766,6 @@ namespace LiveSwitch.TextControl
             if (ReadyState != ReadyState.Complete)
                 return;
 
-#if TRIAL
-            if (DateTime.Now.Subtract(lastSplash).TotalMinutes > 10)
-            {
-                lastSplash = DateTime.Now;
-                var dlg = new SplashForm();
-                dlg.ShowDialog();
-            }
-#endif
             SetupKeyListener();
             boldButton.Checked = IsBold();
             italicButton.Checked = IsItalic();

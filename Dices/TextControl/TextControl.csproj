@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LiveSwitch.TextControl</RootNamespace>
     <AssemblyName>LiveSwitch.TextControl</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
@@ -126,9 +126,6 @@
       <SubType>Designer</SubType>
       <DependentUpon>SearchDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashForm.resx">
-      <DependentUpon>SplashForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TextInsertForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>TextInsertForm.cs</DependentUpon>
@@ -154,12 +151,6 @@
       <DependentUpon>SearchDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="SplashForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SplashForm.Designer.cs">
-      <DependentUpon>SplashForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="TextInsertForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,7 +175,6 @@
     <None Include="Resources\italic.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="switch.jpg" />
     <None Include="app.config" />
     <None Include="Resources\color.bmp" />
     <None Include="Resources\link.bmp" />

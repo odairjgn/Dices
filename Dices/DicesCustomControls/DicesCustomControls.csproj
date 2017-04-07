@@ -81,6 +81,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\TextControl\TextControl.csproj">
       <Project>{da00b3d9-7ce5-4634-a7d2-9a6d3f92c382}</Project>
       <Name>TextControl</Name>
