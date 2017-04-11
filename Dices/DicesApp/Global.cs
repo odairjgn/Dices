@@ -6,6 +6,8 @@ namespace DicesApp
 {
     public class Global
     {
+        public const int MaxBytes = 1073741823;
+
         public static string ConfigFile
         {
             get

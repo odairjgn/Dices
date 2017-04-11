@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using DicesCore.ObjetosDeValor;
 
 namespace DicesCore.Entidades
@@ -12,7 +13,7 @@ namespace DicesCore.Entidades
 
         public string Descricao { get; set; }
 
-        [MaxLength(8000)]
+        [Column(TypeName = "IMAGE")]
         public byte[] Icone { get; set; }
 
         public Cor CorTexto { get; set; }

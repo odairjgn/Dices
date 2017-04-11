@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DicesCore.Entidades
 {
@@ -14,7 +15,7 @@ namespace DicesCore.Entidades
 
         public DateTime Criacao { get; set; }
         
-        [MaxLength(8000)]
+        [Column(TypeName = "IMAGE")]
         public byte[] Icone { get; set; }
 
 

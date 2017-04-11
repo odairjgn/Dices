@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Windows.Forms;
 using DicesCore.ObjetosDeValor;
 
@@ -19,6 +20,7 @@ namespace DicesCore.Entidades
 
         public Keys Atalho { get; set; }
 
+        [Column(TypeName = "IMAGE")]
         public byte[] Icone { get; set; }
 
         public virtual Aventura Aventura { get; set; }

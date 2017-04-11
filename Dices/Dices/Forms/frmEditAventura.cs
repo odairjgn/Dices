@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using DicesApp;
 using DicesCore.Entidades;
 
 namespace Dices.Forms
@@ -64,9 +65,9 @@ namespace Dices.Forms
 
             var fi = new FileInfo(ofdImg.FileName);
 
-            if (fi.Length > 8000)
+            if (fi.Length > Global.MaxBytes)
             {
-                MessageBox.Show("Favor selecionar um arquivo com menos de 8000 bytes!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show($"Favor selecionar um arquivo com menos de {Global.MaxBytes} bytes!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
 
