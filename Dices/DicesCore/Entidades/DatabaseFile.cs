@@ -7,6 +7,7 @@ namespace DicesCore.Entidades
     public class DatabaseFile : ItemMidia
     {
         [Required]
+        [MaxLength(8000)]
         public byte[] Dados { get; set; }
         
         [Required]

@@ -14,6 +14,7 @@ namespace DicesCore.Entidades
 
         public DateTime Criacao { get; set; }
         
+        [MaxLength(8000)]
         public byte[] Icone { get; set; }
 
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DicesCore.Entidades
 {
@@ -9,6 +10,7 @@ namespace DicesCore.Entidades
         [MaxLength(300)]
         public string Titulo { get; set; }
 
+        [Column(TypeName = "NTEXT")]
         public string Conteudo { get; set; }
 
         public DateTime UltimaAlteracao { get; set; }

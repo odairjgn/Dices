@@ -12,6 +12,7 @@ namespace DicesCore.Entidades
 
         public string Descricao { get; set; }
 
+        [MaxLength(8000)]
         public byte[] Icone { get; set; }
 
         public Cor CorTexto { get; set; }

@@ -64,9 +64,9 @@ namespace Dices.Forms
 
             var fi = new FileInfo(ofdImg.FileName);
 
-            if (fi.Length > 4000)
+            if (fi.Length > 8000)
             {
-                MessageBox.Show("Favor selecionar um arquivo com menos de 4000 bytes!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Favor selecionar um arquivo com menos de 8000 bytes!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
 
