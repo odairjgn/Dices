@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DicesCore.Extensoes;
 using DicesCore.ObjetosDeValor;
 
 namespace DicesCore.Entidades
@@ -13,8 +14,16 @@ namespace DicesCore.Entidades
 
         public string Descricao { get; set; }
 
-        [Column(TypeName = "IMAGE")]
-        public byte[] Icone { get; set; }
+        [Column(TypeName = "NTEXT")]
+        [MaxLength]
+        public string Icone { get; set; }
+
+        [NotMapped]
+        public byte[] IconeBytes
+        {
+            get { return Icone.GetByteArrayFromB64(); }
+            set { Icone = value.GetB64FromByteArray(); }
+        }
 
         public Cor CorTexto { get; set; }
 

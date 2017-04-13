@@ -37,7 +37,7 @@ namespace Dices.Forms
 
             foreach (var av in aventuras)
             {
-                lvAventuras.LargeImageList.Images.Add(av.Id.ToString(), av.Icone == null ? Properties.Resources.DefaultAdventure : Image.FromStream(stream: new MemoryStream(av.Icone)));
+                lvAventuras.LargeImageList.Images.Add(av.Id.ToString(), av.Icone == null ? Properties.Resources.DefaultAdventure : Image.FromStream(stream: new MemoryStream(av.IconeBytes)));
                 var lvi = new ListViewItem(av.Titulo);
                 lvi.ImageKey = av.Id.ToString();
                 lvi.ToolTipText = av.Descricao;

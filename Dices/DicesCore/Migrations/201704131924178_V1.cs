@@ -1,5 +1,6 @@
 namespace DicesCore.Migrations
 {
+    using System;
     using System.Data.Entity.Migrations;
     
     public partial class V1 : DbMigration
@@ -14,7 +15,7 @@ namespace DicesCore.Migrations
                         Titulo = c.String(nullable: false, maxLength: 200),
                         Descricao = c.String(maxLength: 4000),
                         Criacao = c.DateTime(nullable: false),
-                        Icone = c.Binary(),
+                        Icone = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -32,7 +33,7 @@ namespace DicesCore.Migrations
                         CorFundo_G = c.Byte(nullable: false),
                         CorFundo_B = c.Byte(nullable: false),
                         Atalho = c.Int(nullable: false),
-                        Icone = c.Binary(),
+                        Icone = c.String(),
                         Aventura_Id = c.Int(),
                         Personagem_Id = c.Int(),
                     })
@@ -143,7 +144,7 @@ namespace DicesCore.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Nome = c.String(nullable: false, maxLength: 100),
                         Descricao = c.String(maxLength: 4000),
-                        Icone = c.Binary(),
+                        Icone = c.String(),
                         CorTexto_R = c.Byte(nullable: false),
                         CorTexto_G = c.Byte(nullable: false),
                         CorTexto_B = c.Byte(nullable: false),

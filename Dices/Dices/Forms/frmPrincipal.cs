@@ -24,16 +24,17 @@ namespace Dices.Forms
             Text = $"Dices: {_aventura.Titulo}";
         }
 
-        private void toolStripButton1_Click(object sender, System.EventArgs e)
+        
+        private void toolStripMenuItem1_Click(object sender, System.EventArgs e)
         {
-            if (Application.OpenForms.Cast<Form>().Any(f => f is FrmCalc))
+            if (Application.OpenForms.Cast<Form>().Any(f => f is frmCalc))
             {
-                var form = Application.OpenForms.Cast<Form>().First(f => f is FrmCalc);
+                var form = Application.OpenForms.Cast<Form>().First(f => f is frmCalc);
                 form.Focus();
                 return;
             }
 
-            new FrmCalc().ShowDialog();
+            new frmCalc().Show();
         }
     }
 }

@@ -19,7 +19,6 @@ namespace Dices
             {
 
                 DicesApp.Global.Contexto = new DicesContext();
-
                 
                 var selAvt = new frmSelAventura();
 

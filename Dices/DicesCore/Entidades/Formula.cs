@@ -1,6 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Windows.Forms;
+using DicesCore.Extensoes;
 using DicesCore.ObjetosDeValor;
 
 namespace DicesCore.Entidades
@@ -20,8 +22,17 @@ namespace DicesCore.Entidades
 
         public Keys Atalho { get; set; }
 
-        [Column(TypeName = "IMAGE")]
-        public byte[] Icone { get; set; }
+        [Column(TypeName = "NTEXT")]
+        [MaxLength]
+        public string Icone { get; set; }
+
+        [NotMapped]
+        public byte[] IconeBytes
+        {
+            get { return Icone.GetByteArrayFromB64(); }
+            set { Icone = value.GetB64FromByteArray(); }
+        }
+
 
         public virtual Aventura Aventura { get; set; }
 

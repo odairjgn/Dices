@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DicesCore.Extensoes;
 
 namespace DicesCore.Entidades
 {
@@ -9,7 +10,8 @@ namespace DicesCore.Entidades
     {
         [Required]
         [Column(TypeName = "NTEXT")]
-        public string DadosBase64 { get; protected set; }
+        [MaxLength]
+        public string DadosBase64 { get; set; }
         
         [Required]
         [MaxLength(20)]
@@ -18,8 +20,8 @@ namespace DicesCore.Entidades
         [NotMapped]
         public byte[] DadosByte
         {
-            get { return Convert.FromBase64String(DadosBase64); }
-            set { DadosBase64 = Convert.ToBase64String(value); }
+            get { return DadosBase64.GetByteArrayFromB64(); }
+            set { DadosBase64 = value.GetB64FromByteArray(); }
         }
 
         protected DatabaseFile()

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DicesCore.Extensoes;
 
 namespace DicesCore.Entidades
 {
@@ -15,9 +16,16 @@ namespace DicesCore.Entidades
 
         public DateTime Criacao { get; set; }
         
-        [Column(TypeName = "IMAGE")]
-        public byte[] Icone { get; set; }
+        [Column(TypeName = "NTEXT")]
+        [MaxLength]
+        public string Icone { get; set; }
 
+        [NotMapped]
+        public byte[] IconeBytes
+        {
+            get { return Icone.GetByteArrayFromB64(); }
+            set { Icone = value.GetB64FromByteArray(); }
+        }
 
         public virtual ICollection<Formula> Formulas { get; set; }
         public virtual ICollection<Personagem> Personagens { get; set; }
@@ -33,7 +41,7 @@ namespace DicesCore.Entidades
             Titulo = titulo;
             Descricao = descricao;
             Criacao = criacao;
-            Icone = icone;
+            IconeBytes = icone;
         }
     }
 }

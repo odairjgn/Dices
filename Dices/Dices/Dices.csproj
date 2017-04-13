@@ -81,11 +81,17 @@
     <Compile Include="Forms\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Inputs\FrmCalc.cs">
+    <Compile Include="Forms\Inputs\frmCalc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Inputs\FrmCalc.Designer.cs">
-      <DependentUpon>FrmCalc.cs</DependentUpon>
+    <Compile Include="Forms\Inputs\frmCalc.Designer.cs">
+      <DependentUpon>frmCalc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inputs\ucCalcKeyboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Inputs\ucCalcKeyboard.Designer.cs">
+      <DependentUpon>ucCalcKeyboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Ucs\ucDx.cs">
       <SubType>UserControl</SubType>
@@ -104,8 +110,11 @@
     <EmbeddedResource Include="Forms\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Inputs\FrmCalc.resx">
-      <DependentUpon>FrmCalc.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Inputs\frmCalc.resx">
+      <DependentUpon>frmCalc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inputs\ucCalcKeyboard.resx">
+      <DependentUpon>ucCalcKeyboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Ucs\ucDx.resx">
       <DependentUpon>ucDx.cs</DependentUpon>

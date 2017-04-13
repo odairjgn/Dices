@@ -32,7 +32,7 @@ namespace Dices.Forms
             {
                 _aventura.Titulo = txtTitulo.Text;
                 _aventura.Descricao = txtTitulo.Text;
-                _aventura.Icone = _dadosIcone;
+                _aventura.IconeBytes = _dadosIcone;
             }
             else
             {
@@ -49,7 +49,7 @@ namespace Dices.Forms
             {
                 txtTitulo.Text = _aventura.Titulo;
                 txtDesc.Text = _aventura.Descricao;
-                _dadosIcone = _aventura.Icone;
+                _dadosIcone = _aventura.IconeBytes;
 
                 if(_dadosIcone != null)
                     pbImg.Image = Image.FromStream(new MemoryStream(_dadosIcone));
