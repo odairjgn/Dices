@@ -48,7 +48,7 @@
             this.Controls.Add(this.ucCalcKeyboard1);
             this.MinimumSize = new System.Drawing.Size(437, 592);
             this.Name = "frmCalc";
-            this.Text = "frmCalc";
+            this.Text = "Calculadora";
             this.ResumeLayout(false);
 
         }

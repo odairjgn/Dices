@@ -151,7 +151,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEditAventura";
-            this.Text = "frmEditAventura";
+            this.Text = "Aventura [Edição]";
             this.Load += new System.EventHandler(this.frmEditAventura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbImg)).EndInit();
             this.ResumeLayout(false);
