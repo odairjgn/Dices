@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dices", "Dices\Dices.csproj", "{69D109F8-FD3B-48AB-AC69-A138CFF053DE}"
 EndProject
@@ -10,10 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DicesCustomControls", "DicesCustomControls\DicesCustomControls.csproj", "{509126AC-9DA7-41D0-AA72-288601F5808A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DicesApp", "DicesApp\DicesApp.csproj", "{29104F02-75CD-4FB7-A8DD-9A724AB7FAC3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Terceiros", "Terceiros", "{8A854968-E9EC-4961-A2F3-0D0630F9873C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextControl", "TextControl\TextControl.csproj", "{DA00B3D9-7CE5-4634-A7D2-9A6D3F92C382}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,17 +42,8 @@ Global
 		{29104F02-75CD-4FB7-A8DD-9A724AB7FAC3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{29104F02-75CD-4FB7-A8DD-9A724AB7FAC3}.Trial|Any CPU.ActiveCfg = Release|Any CPU
 		{29104F02-75CD-4FB7-A8DD-9A724AB7FAC3}.Trial|Any CPU.Build.0 = Release|Any CPU
-		{DA00B3D9-7CE5-4634-A7D2-9A6D3F92C382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA00B3D9-7CE5-4634-A7D2-9A6D3F92C382}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA00B3D9-7CE5-4634-A7D2-9A6D3F92C382}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA00B3D9-7CE5-4634-A7D2-9A6D3F92C382}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA00B3D9-7CE5-4634-A7D2-9A6D3F92C382}.Trial|Any CPU.ActiveCfg = Trial|Any CPU
-		{DA00B3D9-7CE5-4634-A7D2-9A6D3F92C382}.Trial|Any CPU.Build.0 = Trial|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{DA00B3D9-7CE5-4634-A7D2-9A6D3F92C382} = {8A854968-E9EC-4961-A2F3-0D0630F9873C}
 	EndGlobalSection
 EndGlobal
