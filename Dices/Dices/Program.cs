@@ -15,6 +15,9 @@ namespace Dices
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            new Form1().ShowDialog();
+
             try
             {
 
