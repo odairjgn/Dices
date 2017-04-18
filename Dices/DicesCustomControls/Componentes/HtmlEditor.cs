@@ -36,9 +36,7 @@ namespace DicesCustomControls.Componentes
                 new UnorderedListButton(),
             });
 
-            var fon = new InstalledFontCollection().Families.Where(f => f.IsStyleAvailable(FontStyle.Regular)).Select(f => f.Name);
-
-            _edit.AddFontSelector(fon);
+            _edit.AddFontSelector(DicesCore.Global.FontesValidas);
             _edit.AddFontSizeSelector(new List<int>() {1, 2, 3, 4, 5, 6, 7});
             Controls.Add(_edit);
         }

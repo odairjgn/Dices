@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Windows.Forms;
 using Dices.Forms.Inputs;
+using DicesCore;
 using DicesCore.Contexto;
 using DicesCore.Entidades;
 
@@ -15,7 +16,7 @@ namespace Dices.Forms
         public frmPrincipal(int idAventura)
         {
             InitializeComponent();
-            _aventuraRepositorio = new Repositorio<Aventura>(DicesApp.Global.Contexto);
+            _aventuraRepositorio = new Repositorio<Aventura>(Global.Contexto);
             _aventura = _aventuraRepositorio.Get(idAventura);
         }
 

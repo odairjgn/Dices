@@ -3,6 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using DicesApp;
+using DicesCore;
 using DicesCore.Entidades;
 
 namespace Dices.Forms

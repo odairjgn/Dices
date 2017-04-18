@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using Dices.Forms;
-using DicesCore.Contexto;
 
 namespace Dices
 {
@@ -16,13 +15,15 @@ namespace Dices
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            new Form1().ShowDialog();
-
             try
             {
+                var splash = new frmSplashScreen();
+                if(splash.ShowDialog() != DialogResult.OK) return;
 
-                DicesApp.Global.Contexto = new DicesContext();
-                
+
+                new Form1().ShowDialog();
+
+
                 var selAvt = new frmSelAventura();
 
                 if (selAvt.ShowDialog() == DialogResult.OK)

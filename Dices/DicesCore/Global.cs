@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace DicesApp
+namespace DicesCore
 {
     public class Global
     {
@@ -25,5 +25,6 @@ namespace DicesApp
 
         public static Dictionary<string, double> Variaveis = new Dictionary<string, double>();
         public static DicesCore.Contexto.DicesContext Contexto { get; set; }
+        public static IEnumerable<string> FontesValidas { get; set; }
     }
 }

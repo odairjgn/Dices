@@ -1,5 +1,6 @@
 ﻿using System;
 using DicesApp.Extentions;
+using DicesCore;
 using NCalc;
 
 namespace DicesApp.ObjetosDeValor

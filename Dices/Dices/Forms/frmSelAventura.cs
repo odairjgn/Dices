@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using DicesCore;
 using DicesCore.Contexto;
 using DicesCore.Entidades;
 
@@ -16,7 +17,7 @@ namespace Dices.Forms
         public frmSelAventura()
         {
             InitializeComponent();
-            _aventuraContexto = new Repositorio<Aventura>(DicesApp.Global.Contexto);
+            _aventuraContexto = new Repositorio<Aventura>(Global.Contexto);
         }
 
         private void frmSelAventura_Load(object sender, System.EventArgs e)
