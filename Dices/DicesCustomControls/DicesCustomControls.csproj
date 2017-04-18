@@ -38,6 +38,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.Ribbon35, Version=3.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Forms.Ribbon35.3.5.8.0\lib\net35\System.Windows.Forms.Ribbon35.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +77,12 @@
     <Compile Include="Componentes\LigthBox.Designer.cs">
       <DependentUpon>LigthBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Componentes\RibbonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\RibbonForm.Designer.cs">
+      <DependentUpon>RibbonForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Delegates\EventsHandlers\PlayerProgressArgs.cs" />
     <Compile Include="Delegates\PlayerDelegates.cs" />
     <Compile Include="Enums\EDockSide.cs" />
@@ -92,18 +102,25 @@
     <EmbeddedResource Include="Componentes\LigthBox.resx">
       <DependentUpon>LigthBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\RibbonForm.resx">
+      <DependentUpon>RibbonForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DLL\YARTE.dll" />
+    <Content Include="Updates.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DicesCore\DicesCore.csproj">
       <Project>{63732e0a-51fe-40e5-80cf-bf0539edfb1d}</Project>
       <Name>DicesCore</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
