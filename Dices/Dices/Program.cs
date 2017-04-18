@@ -11,13 +11,20 @@ namespace Dices
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            
             try
             {
+                var files = AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData;
+
+                if (files != null)
+                {
+                    //Abrir File
+                }
+
                 new RibbonForm().ShowDialog();
 
                 var splash = new frmSplashScreen();
