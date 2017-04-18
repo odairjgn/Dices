@@ -10,6 +10,12 @@ namespace DicesApp.Extentions
         {
             var texto = new StringBuilder();
 
+            texto.AppendLine($"{exception.Message}");
+            texto.AppendLine();
+            texto.AppendLine($"Local: {exception.TargetSite}");
+            texto.AppendLine($"Fonte: {exception.Source}");
+            texto.AppendLine($"Pilha: {exception.StackTrace}");
+
             MessageBox.Show(texto.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }

@@ -19,10 +19,7 @@ namespace Dices
             {
                 var splash = new frmSplashScreen();
                 if(splash.ShowDialog() != DialogResult.OK) return;
-
-
-                new Form1().ShowDialog();
-
+                
 
                 var selAvt = new frmSelAventura();
 
