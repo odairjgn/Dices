@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.tt = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 462);
+            this.ClientSize = new System.Drawing.Size(284, 262);
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
@@ -45,6 +43,5 @@
         }
 
         #endregion
-        private System.Windows.Forms.ToolTip tt;
     }
 }

@@ -77,12 +77,6 @@
     <Compile Include="Componentes\LigthBox.Designer.cs">
       <DependentUpon>LigthBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Componentes\RibbonForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Componentes\RibbonForm.Designer.cs">
-      <DependentUpon>RibbonForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Delegates\EventsHandlers\PlayerProgressArgs.cs" />
     <Compile Include="Delegates\PlayerDelegates.cs" />
     <Compile Include="Enums\EDockSide.cs" />
@@ -102,15 +96,11 @@
     <EmbeddedResource Include="Componentes\LigthBox.resx">
       <DependentUpon>LigthBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Componentes\RibbonForm.resx">
-      <DependentUpon>RibbonForm.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DLL\YARTE.dll" />
     <Content Include="Updates.txt" />
   </ItemGroup>
   <ItemGroup>
