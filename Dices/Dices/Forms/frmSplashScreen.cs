@@ -20,7 +20,7 @@ namespace Dices.Forms
             try
             {
                 ReportProgress("Inicializando banco de dados...");
-                Global.Contexto = new DicesContext();
+                Global.Contexto = new DicesContext(Global.DbFile);
 
                 ReportProgress("Carregando Fontes...");
                 GerenciadorDeAmbiente.CarregarFontes();

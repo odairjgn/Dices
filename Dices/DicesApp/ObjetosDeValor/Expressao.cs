@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using DicesApp.Extentions;
 using DicesCore;
 using NCalc;
@@ -9,10 +10,10 @@ namespace DicesApp.ObjetosDeValor
     {
         private readonly Expression _expressao;
 
-        public Expressao(string formula)
+        public Expressao(string formula, Dictionary<string, double> variaveis = null)
         {
             _expressao = new Expression(formula.ProcessarSorteioDados(), EvaluateOptions.IgnoreCase);
-            _expressao.Parameters = Global.Variaveis.ConvertPraDicionarioObjetos();
+            _expressao.Parameters = variaveis == null ? Global.Variaveis.ConvertPraDicionarioObjetos() : variaveis.ConvertPraDicionarioObjetos();
         }
 
         public bool Valida => !_expressao.HasErrors();
@@ -41,6 +42,6 @@ namespace DicesApp.ObjetosDeValor
 
             return ret;
         }
-        
+
     }
 }

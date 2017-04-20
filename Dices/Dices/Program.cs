@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using Dices.Forms;
-using DicesCustomControls.Componentes;
 
 namespace Dices
 {
@@ -24,9 +23,7 @@ namespace Dices
                 {
                     //Abrir File
                 }
-
-                new RibbonForm().ShowDialog();
-
+                
                 var splash = new frmSplashScreen();
                 if(splash.ShowDialog() != DialogResult.OK) return;
                 

@@ -76,6 +76,7 @@
     <Compile Include="Entidades\Variavel.cs" />
     <Compile Include="Entidades\WebLink.cs" />
     <Compile Include="Extensoes\BinaryExtentions.cs" />
+    <Compile Include="Extensoes\IOExtentions.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="Migrations\201704131924178_V1.cs" />
     <Compile Include="Migrations\201704131924178_V1.Designer.cs">
