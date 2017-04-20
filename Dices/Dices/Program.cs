@@ -17,7 +17,7 @@ namespace Dices
             
             try
             {
-                var files = AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData;
+                var files = AppDomain.CurrentDomain.SetupInformation.ActivationArguments?.ActivationData;
 
                 if (files != null)
                 {

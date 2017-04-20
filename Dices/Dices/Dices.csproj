@@ -55,7 +55,7 @@
     <ManifestKeyFile>Dices_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
@@ -224,7 +224,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DLL\YARTE.dll" />
     <Content Include="FormulaIco.ico" />
   </ItemGroup>
   <ItemGroup>

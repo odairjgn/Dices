@@ -101,6 +101,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DLL\YARTE.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Updates.txt" />
   </ItemGroup>
   <ItemGroup>
