@@ -28,6 +28,8 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -84,6 +86,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.Ribbon35, Version=3.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Forms.Ribbon35.3.5.8.0\lib\net35\System.Windows.Forms.Ribbon35.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
@@ -225,6 +231,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FormulaIco.ico" />
+    <None Include="Resources\Dice.png" />
+    <None Include="Resources\d4.png" />
+    <None Include="Resources\d6.png" />
+    <None Include="Resources\d8.png" />
+    <None Include="Resources\d10.png" />
+    <None Include="Resources\d10p.png" />
+    <None Include="Resources\d12.png" />
+    <None Include="Resources\d20.png" />
+    <None Include="Resources\d100.png" />
+    <None Include="Resources\dx.png" />
+    <Content Include="RibbonMarkup.xml" />
+    <Content Include="Updates.txt" />
   </ItemGroup>
   <ItemGroup>
     <FileAssociation Include=".dicf">

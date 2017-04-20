@@ -25,6 +25,7 @@ namespace Dices.Forms
             InitializeComponent();
             _aventuraRepositorio = new Repositorio<Aventura>(Global.Contexto);
             _aventura = _aventuraRepositorio.Get(idAventura);
+            mainMenu.Dock = DockStyle.Fill;
         }
 
         private void frmPrincipal_Load(object sender, System.EventArgs e)
