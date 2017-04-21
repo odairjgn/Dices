@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Extentions\ExceptionExtentions.cs" />
     <Compile Include="Extentions\FormulasExtentions.cs" />
+    <Compile Include="Interfaces\IConfiguravel.cs" />
     <Compile Include="ObjetosDeValor\ConfigFile.cs" />
     <Compile Include="ObjetosDeValor\Expressao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

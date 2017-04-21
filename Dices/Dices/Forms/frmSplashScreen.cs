@@ -25,6 +25,9 @@ namespace Dices.Forms
                 ReportProgress("Carregando Fontes...");
                 GerenciadorDeAmbiente.CarregarFontes();
 
+                ReportProgress("Carregando Configuração...");
+                GerenciadorDeAmbiente.CarregarConfiguracao();
+
                 DialogResult = DialogResult.OK;
             }
             catch (Exception ex)

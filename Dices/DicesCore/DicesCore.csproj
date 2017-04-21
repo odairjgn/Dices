@@ -83,6 +83,9 @@
       <DependentUpon>201704131924178_V1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ObjetosDeValor\Configuracao\Configuracao.cs" />
+    <Compile Include="ObjetosDeValor\Configuracao\ConfiguracaoCalculadora.cs" />
+    <Compile Include="ObjetosDeValor\Configuracao\Enumeradores\OpacidadeJanela.cs" />
     <Compile Include="ObjetosDeValor\Cor.cs" />
     <Compile Include="ObjetosDeValor\Enumeradores\TipoMidia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
