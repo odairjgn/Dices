@@ -243,7 +243,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FormulaIco.ico" />
     <None Include="Resources\Dice.png" />
     <None Include="Resources\d4.png" />
     <None Include="Resources\d6.png" />
@@ -257,14 +256,7 @@
     <Content Include="RibbonMarkup.xml" />
     <Content Include="Updates.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <FileAssociation Include=".dicf">
-      <Visible>False</Visible>
-      <Description>Fórmula Dice</Description>
-      <Progid>DICES</Progid>
-      <DefaultIcon>FormulaIco.ico</DefaultIcon>
-    </FileAssociation>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
