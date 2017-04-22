@@ -88,6 +88,7 @@
     <Compile Include="ObjetosDeValor\Configuracao\Enumeradores\OpacidadeJanela.cs" />
     <Compile Include="ObjetosDeValor\Cor.cs" />
     <Compile Include="ObjetosDeValor\Enumeradores\TipoMidia.cs" />
+    <Compile Include="ObjetosDeValor\Historico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

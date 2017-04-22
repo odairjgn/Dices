@@ -58,6 +58,7 @@
             this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
             this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
             this.ribbonTab4 = new System.Windows.Forms.RibbonTab();
+            this.pnPrincipal = new System.Windows.Forms.Panel();
             this.ribbonOrbMenuItem1 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.layout.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +68,7 @@
             this.layout.ColumnCount = 1;
             this.layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.layout.Controls.Add(this.mainMenu, 0, 0);
+            this.layout.Controls.Add(this.pnPrincipal, 0, 1);
             this.layout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout.Location = new System.Drawing.Point(0, 0);
             this.layout.Margin = new System.Windows.Forms.Padding(0);
@@ -119,6 +121,7 @@
             this.mainMenu.TabsMargin = new System.Windows.Forms.Padding(12, 2, 20, 0);
             this.mainMenu.Text = "Menu";
             this.mainMenu.ThemeColor = System.Windows.Forms.RibbonTheme.Black;
+            this.mainMenu.ActiveTabChanged += new System.EventHandler(this.mainMenu_ActiveTabChanged);
             // 
             // menuImportExport
             // 
@@ -196,6 +199,7 @@
             this.btnD20.Image = global::Dices.Properties.Resources.d20;
             this.btnD20.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD20.SmallImage")));
             this.btnD20.Text = "D20";
+            this.btnD20.Click += new System.EventHandler(this.btnD20_Click);
             // 
             // btnD4
             // 
@@ -270,6 +274,15 @@
             // 
             this.ribbonTab4.Text = "Multimídia";
             // 
+            // pnPrincipal
+            // 
+            this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnPrincipal.Location = new System.Drawing.Point(0, 145);
+            this.pnPrincipal.Margin = new System.Windows.Forms.Padding(0);
+            this.pnPrincipal.Name = "pnPrincipal";
+            this.pnPrincipal.Size = new System.Drawing.Size(1029, 347);
+            this.pnPrincipal.TabIndex = 1;
+            // 
             // ribbonOrbMenuItem1
             // 
             this.ribbonOrbMenuItem1.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
@@ -324,5 +337,6 @@
         private System.Windows.Forms.RibbonTab ribbonTab3;
         private System.Windows.Forms.RibbonTab ribbonTab4;
         private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem1;
+        private System.Windows.Forms.Panel pnPrincipal;
     }
 }
