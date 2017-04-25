@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using DicesCore.Entidades;
 
 namespace DicesCore.Contexto
@@ -15,6 +16,11 @@ namespace DicesCore.Contexto
             
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
+
         public DbSet<Aventura> Aventuras { get; set; }
         public DbSet<Personagem> Personagens { get; set; }
         public DbSet<Classe> Classes { get; set; }
@@ -25,5 +31,6 @@ namespace DicesCore.Contexto
         public DbSet<PlayList> PlayLists { get; set; }
         public DbSet<Pagina> Paginas { get; set; }
         public DbSet<Configuracao> Configuracoes { get; set; }
+        public DbSet<Progressao> Progressoes { get; set; }
     }
 }

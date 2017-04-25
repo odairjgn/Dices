@@ -13,7 +13,7 @@ namespace DicesCore.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201704131924178_V1"; }
+            get { return "201704251233051_V1"; }
         }
         
         string IMigrationMetadata.Source

@@ -8,7 +8,7 @@ namespace DicesCore.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Aventuras",
+                "dbo.Aventura",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -20,7 +20,7 @@ namespace DicesCore.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Formulae",
+                "dbo.Formula",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -38,13 +38,13 @@ namespace DicesCore.Migrations
                         Personagem_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Aventuras", t => t.Aventura_Id)
-                .ForeignKey("dbo.Personagems", t => t.Personagem_Id)
+                .ForeignKey("dbo.Aventura", t => t.Aventura_Id)
+                .ForeignKey("dbo.Personagem", t => t.Personagem_Id)
                 .Index(t => t.Aventura_Id)
                 .Index(t => t.Personagem_Id);
             
             CreateTable(
-                "dbo.Personagems",
+                "dbo.Personagem",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -53,11 +53,11 @@ namespace DicesCore.Migrations
                         Aventura_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Aventuras", t => t.Aventura_Id)
+                .ForeignKey("dbo.Aventura", t => t.Aventura_Id)
                 .Index(t => t.Aventura_Id);
             
             CreateTable(
-                "dbo.Variavels",
+                "dbo.Variavel",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -67,13 +67,29 @@ namespace DicesCore.Migrations
                         Personagem_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Aventuras", t => t.Aventura_Id)
-                .ForeignKey("dbo.Personagems", t => t.Personagem_Id)
+                .ForeignKey("dbo.Aventura", t => t.Aventura_Id)
+                .ForeignKey("dbo.Personagem", t => t.Personagem_Id)
                 .Index(t => t.Aventura_Id)
                 .Index(t => t.Personagem_Id);
             
             CreateTable(
-                "dbo.Classes",
+                "dbo.Progressao",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Descricao = c.String(nullable: false, maxLength: 100),
+                        ProgressaoData = c.String(nullable: false, maxLength: 4000),
+                        ValorBase_Id = c.Int(),
+                        ValorReferenciaProgressao_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Variavel", t => t.ValorBase_Id)
+                .ForeignKey("dbo.Variavel", t => t.ValorReferenciaProgressao_Id)
+                .Index(t => t.ValorBase_Id)
+                .Index(t => t.ValorReferenciaProgressao_Id);
+            
+            CreateTable(
+                "dbo.Classe",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -83,7 +99,7 @@ namespace DicesCore.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.SubClasses",
+                "dbo.SubClasse",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -92,11 +108,11 @@ namespace DicesCore.Migrations
                         Classe_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Classes", t => t.Classe_Id)
+                .ForeignKey("dbo.Classe", t => t.Classe_Id)
                 .Index(t => t.Classe_Id);
             
             CreateTable(
-                "dbo.Configuracaos",
+                "dbo.Configuracao",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -107,7 +123,7 @@ namespace DicesCore.Migrations
                 .Index(t => t.Key, unique: true, name: "IX_KEY");
             
             CreateTable(
-                "dbo.ItemMidias",
+                "dbo.ItemMidia",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -117,13 +133,13 @@ namespace DicesCore.Migrations
                         Playlist_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Paginas", t => t.Pagina_Id)
-                .ForeignKey("dbo.PlayLists", t => t.Playlist_Id)
+                .ForeignKey("dbo.Pagina", t => t.Pagina_Id)
+                .ForeignKey("dbo.PlayList", t => t.Playlist_Id)
                 .Index(t => t.Pagina_Id)
                 .Index(t => t.Playlist_Id);
             
             CreateTable(
-                "dbo.Paginas",
+                "dbo.Pagina",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -134,11 +150,11 @@ namespace DicesCore.Migrations
                         NoteBook_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.NoteBooks", t => t.NoteBook_Id)
+                .ForeignKey("dbo.NoteBook", t => t.NoteBook_Id)
                 .Index(t => t.NoteBook_Id);
             
             CreateTable(
-                "dbo.NoteBooks",
+                "dbo.NoteBook",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -155,7 +171,7 @@ namespace DicesCore.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.PlayLists",
+                "dbo.PlayList",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -172,7 +188,7 @@ namespace DicesCore.Migrations
                         Extensao = c.String(nullable: false, maxLength: 20),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.ItemMidias", t => t.Id)
+                .ForeignKey("dbo.ItemMidia", t => t.Id)
                 .Index(t => t.Id);
             
             CreateTable(
@@ -185,7 +201,7 @@ namespace DicesCore.Migrations
                         Extensao = c.String(nullable: false, maxLength: 20),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.ItemMidias", t => t.Id)
+                .ForeignKey("dbo.ItemMidia", t => t.Id)
                 .Index(t => t.Id);
             
             CreateTable(
@@ -196,52 +212,57 @@ namespace DicesCore.Migrations
                         Url = c.String(nullable: false, maxLength: 300),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.ItemMidias", t => t.Id)
+                .ForeignKey("dbo.ItemMidia", t => t.Id)
                 .Index(t => t.Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.WebLink", "Id", "dbo.ItemMidias");
-            DropForeignKey("dbo.LocalFile", "Id", "dbo.ItemMidias");
-            DropForeignKey("dbo.DatabaseFile", "Id", "dbo.ItemMidias");
-            DropForeignKey("dbo.ItemMidias", "Playlist_Id", "dbo.PlayLists");
-            DropForeignKey("dbo.Paginas", "NoteBook_Id", "dbo.NoteBooks");
-            DropForeignKey("dbo.ItemMidias", "Pagina_Id", "dbo.Paginas");
-            DropForeignKey("dbo.SubClasses", "Classe_Id", "dbo.Classes");
-            DropForeignKey("dbo.Variavels", "Personagem_Id", "dbo.Personagems");
-            DropForeignKey("dbo.Variavels", "Aventura_Id", "dbo.Aventuras");
-            DropForeignKey("dbo.Formulae", "Personagem_Id", "dbo.Personagems");
-            DropForeignKey("dbo.Personagems", "Aventura_Id", "dbo.Aventuras");
-            DropForeignKey("dbo.Formulae", "Aventura_Id", "dbo.Aventuras");
+            DropForeignKey("dbo.WebLink", "Id", "dbo.ItemMidia");
+            DropForeignKey("dbo.LocalFile", "Id", "dbo.ItemMidia");
+            DropForeignKey("dbo.DatabaseFile", "Id", "dbo.ItemMidia");
+            DropForeignKey("dbo.ItemMidia", "Playlist_Id", "dbo.PlayList");
+            DropForeignKey("dbo.Pagina", "NoteBook_Id", "dbo.NoteBook");
+            DropForeignKey("dbo.ItemMidia", "Pagina_Id", "dbo.Pagina");
+            DropForeignKey("dbo.SubClasse", "Classe_Id", "dbo.Classe");
+            DropForeignKey("dbo.Variavel", "Personagem_Id", "dbo.Personagem");
+            DropForeignKey("dbo.Variavel", "Aventura_Id", "dbo.Aventura");
+            DropForeignKey("dbo.Progressao", "ValorReferenciaProgressao_Id", "dbo.Variavel");
+            DropForeignKey("dbo.Progressao", "ValorBase_Id", "dbo.Variavel");
+            DropForeignKey("dbo.Formula", "Personagem_Id", "dbo.Personagem");
+            DropForeignKey("dbo.Personagem", "Aventura_Id", "dbo.Aventura");
+            DropForeignKey("dbo.Formula", "Aventura_Id", "dbo.Aventura");
             DropIndex("dbo.WebLink", new[] { "Id" });
             DropIndex("dbo.LocalFile", new[] { "Id" });
             DropIndex("dbo.DatabaseFile", new[] { "Id" });
-            DropIndex("dbo.Paginas", new[] { "NoteBook_Id" });
-            DropIndex("dbo.ItemMidias", new[] { "Playlist_Id" });
-            DropIndex("dbo.ItemMidias", new[] { "Pagina_Id" });
-            DropIndex("dbo.Configuracaos", "IX_KEY");
-            DropIndex("dbo.SubClasses", new[] { "Classe_Id" });
-            DropIndex("dbo.Variavels", new[] { "Personagem_Id" });
-            DropIndex("dbo.Variavels", new[] { "Aventura_Id" });
-            DropIndex("dbo.Personagems", new[] { "Aventura_Id" });
-            DropIndex("dbo.Formulae", new[] { "Personagem_Id" });
-            DropIndex("dbo.Formulae", new[] { "Aventura_Id" });
+            DropIndex("dbo.Pagina", new[] { "NoteBook_Id" });
+            DropIndex("dbo.ItemMidia", new[] { "Playlist_Id" });
+            DropIndex("dbo.ItemMidia", new[] { "Pagina_Id" });
+            DropIndex("dbo.Configuracao", "IX_KEY");
+            DropIndex("dbo.SubClasse", new[] { "Classe_Id" });
+            DropIndex("dbo.Progressao", new[] { "ValorReferenciaProgressao_Id" });
+            DropIndex("dbo.Progressao", new[] { "ValorBase_Id" });
+            DropIndex("dbo.Variavel", new[] { "Personagem_Id" });
+            DropIndex("dbo.Variavel", new[] { "Aventura_Id" });
+            DropIndex("dbo.Personagem", new[] { "Aventura_Id" });
+            DropIndex("dbo.Formula", new[] { "Personagem_Id" });
+            DropIndex("dbo.Formula", new[] { "Aventura_Id" });
             DropTable("dbo.WebLink");
             DropTable("dbo.LocalFile");
             DropTable("dbo.DatabaseFile");
-            DropTable("dbo.PlayLists");
-            DropTable("dbo.NoteBooks");
-            DropTable("dbo.Paginas");
-            DropTable("dbo.ItemMidias");
-            DropTable("dbo.Configuracaos");
-            DropTable("dbo.SubClasses");
-            DropTable("dbo.Classes");
-            DropTable("dbo.Variavels");
-            DropTable("dbo.Personagems");
-            DropTable("dbo.Formulae");
-            DropTable("dbo.Aventuras");
+            DropTable("dbo.PlayList");
+            DropTable("dbo.NoteBook");
+            DropTable("dbo.Pagina");
+            DropTable("dbo.ItemMidia");
+            DropTable("dbo.Configuracao");
+            DropTable("dbo.SubClasse");
+            DropTable("dbo.Classe");
+            DropTable("dbo.Progressao");
+            DropTable("dbo.Variavel");
+            DropTable("dbo.Personagem");
+            DropTable("dbo.Formula");
+            DropTable("dbo.Aventura");
         }
     }
 }
