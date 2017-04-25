@@ -16,12 +16,15 @@ namespace DicesApp.Servicos
         {
             var strm = new StreamWriter(arquivo.FullName);
             _serializador.Serialize(strm, objeto);
+            strm.Close();
         }
 
         public T Deserializar(FileInfo arquivo)
         {
             var strm = new StreamReader(arquivo.FullName);
-            return (T)_serializador.Deserialize(strm);
+            var retorno = (T)_serializador.Deserialize(strm);
+            strm.Close();
+            return retorno;
         }
     }
 }

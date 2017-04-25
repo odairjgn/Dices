@@ -24,6 +24,10 @@ namespace Dices.Forms
 
                 ReportProgress("Carregando Fontes...");
                 GerenciadorDeAmbiente.CarregarFontes();
+                GerenciadorDeFontesCustomizadas.LoadFontes();
+
+                ReportProgress("Carregando Configuração...");
+                GerenciadorDeAmbiente.CarregarConfiguracao();
 
                 DialogResult = DialogResult.OK;
             }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using DicesCore.Extensoes;
+using DicesCore.ObjetosDeValor;
+using DicesCore.ObjetosDeValor.Configuracao;
 
 namespace DicesCore
 {
@@ -20,5 +22,8 @@ namespace DicesCore
         public static Dictionary<string, double> Variaveis = new Dictionary<string, double>();
         public static DicesCore.Contexto.DicesContext Contexto { get; set; }
         public static IEnumerable<string> FontesValidas { get; set; }
+        public static Configuracao Configuracao { get; set; }
+
+        public static List<Historico> Historico { get; set; } = new List<Historico>();
     }
 }

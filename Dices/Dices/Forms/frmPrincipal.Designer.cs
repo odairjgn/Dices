@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.layout = new System.Windows.Forms.TableLayoutPanel();
             this.mainMenu = new System.Windows.Forms.Ribbon();
-            this.rtbInicio = new System.Windows.Forms.RibbonTab();
-            this.rpnCalc = new System.Windows.Forms.RibbonPanel();
-            this.rpbDados = new System.Windows.Forms.RibbonPanel();
             this.menuImportExport = new System.Windows.Forms.RibbonOrbMenuItem();
             this.menuTrocar = new System.Windows.Forms.RibbonButton();
             this.menuAjuda = new System.Windows.Forms.RibbonButton();
             this.menuSair = new System.Windows.Forms.RibbonButton();
             this.mSobre = new System.Windows.Forms.RibbonButton();
             this.menuFeedbak = new System.Windows.Forms.RibbonOrbRecentItem();
+            this.rtbInicio = new System.Windows.Forms.RibbonTab();
+            this.rpnCalc = new System.Windows.Forms.RibbonPanel();
             this.rbtCalculadora = new System.Windows.Forms.RibbonButton();
+            this.rpbDados = new System.Windows.Forms.RibbonPanel();
             this.btnD20 = new System.Windows.Forms.RibbonButton();
             this.btnD4 = new System.Windows.Forms.RibbonButton();
             this.btnD6 = new System.Windows.Forms.RibbonButton();
@@ -48,10 +48,18 @@
             this.btnD10 = new System.Windows.Forms.RibbonButton();
             this.btnD12 = new System.Windows.Forms.RibbonButton();
             this.btnD100 = new System.Windows.Forms.RibbonButton();
+            this.ribbonSeparator2 = new System.Windows.Forms.RibbonSeparator();
             this.btn10p = new System.Windows.Forms.RibbonButton();
             this.ribbonSeparator1 = new System.Windows.Forms.RibbonSeparator();
             this.btnDOutros = new System.Windows.Forms.RibbonButton();
-            this.ribbonSeparator2 = new System.Windows.Forms.RibbonSeparator();
+            this.rtbHistorico = new System.Windows.Forms.RibbonTab();
+            this.rpnHistorico = new System.Windows.Forms.RibbonPanel();
+            this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
+            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
+            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
+            this.ribbonTab4 = new System.Windows.Forms.RibbonTab();
+            this.pnPrincipal = new System.Windows.Forms.Panel();
+            this.ribbonOrbMenuItem1 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,14 +68,15 @@
             this.layout.ColumnCount = 1;
             this.layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.layout.Controls.Add(this.mainMenu, 0, 0);
+            this.layout.Controls.Add(this.pnPrincipal, 0, 1);
             this.layout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout.Location = new System.Drawing.Point(0, 0);
             this.layout.Margin = new System.Windows.Forms.Padding(0);
             this.layout.Name = "layout";
             this.layout.RowCount = 2;
-            this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 145F));
             this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.layout.Size = new System.Drawing.Size(775, 492);
+            this.layout.Size = new System.Drawing.Size(1029, 492);
             this.layout.TabIndex = 0;
             // 
             // mainMenu
@@ -101,38 +110,18 @@
             this.mainMenu.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2013;
             this.mainMenu.OrbText = "Dices";
             this.mainMenu.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.mainMenu.Size = new System.Drawing.Size(775, 122);
+            this.mainMenu.Size = new System.Drawing.Size(1029, 145);
             this.mainMenu.TabIndex = 0;
             this.mainMenu.Tabs.Add(this.rtbInicio);
+            this.mainMenu.Tabs.Add(this.rtbHistorico);
+            this.mainMenu.Tabs.Add(this.ribbonTab1);
+            this.mainMenu.Tabs.Add(this.ribbonTab2);
+            this.mainMenu.Tabs.Add(this.ribbonTab3);
+            this.mainMenu.Tabs.Add(this.ribbonTab4);
             this.mainMenu.TabsMargin = new System.Windows.Forms.Padding(12, 2, 20, 0);
             this.mainMenu.Text = "Menu";
             this.mainMenu.ThemeColor = System.Windows.Forms.RibbonTheme.Black;
-            // 
-            // rtbInicio
-            // 
-            this.rtbInicio.Panels.Add(this.rpnCalc);
-            this.rtbInicio.Panels.Add(this.rpbDados);
-            this.rtbInicio.Text = "Inicio";
-            // 
-            // rpnCalc
-            // 
-            this.rpnCalc.Items.Add(this.rbtCalculadora);
-            this.rpnCalc.Text = "Atalhos";
-            // 
-            // rpbDados
-            // 
-            this.rpbDados.Items.Add(this.btnD20);
-            this.rpbDados.Items.Add(this.btnD4);
-            this.rpbDados.Items.Add(this.btnD6);
-            this.rpbDados.Items.Add(this.btnD8);
-            this.rpbDados.Items.Add(this.btnD10);
-            this.rpbDados.Items.Add(this.btnD12);
-            this.rpbDados.Items.Add(this.btnD100);
-            this.rpbDados.Items.Add(this.ribbonSeparator2);
-            this.rpbDados.Items.Add(this.btn10p);
-            this.rpbDados.Items.Add(this.ribbonSeparator1);
-            this.rpbDados.Items.Add(this.btnDOutros);
-            this.rpbDados.Text = "Dados";
+            this.mainMenu.ActiveTabChanged += new System.EventHandler(this.mainMenu_ActiveTabChanged);
             // 
             // menuImportExport
             // 
@@ -171,18 +160,46 @@
             this.menuFeedbak.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuFeedbak.SmallImage")));
             this.menuFeedbak.Text = "Deixe seu feedeback";
             // 
+            // rtbInicio
+            // 
+            this.rtbInicio.Panels.Add(this.rpnCalc);
+            this.rtbInicio.Panels.Add(this.rpbDados);
+            this.rtbInicio.Text = "Inicio";
+            // 
+            // rpnCalc
+            // 
+            this.rpnCalc.Items.Add(this.rbtCalculadora);
+            this.rpnCalc.Text = "Atalhos";
+            // 
             // rbtCalculadora
             // 
             this.rbtCalculadora.Image = global::Dices.Properties.Resources.CalculadoraIco;
             this.rbtCalculadora.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbtCalculadora.SmallImage")));
             this.rbtCalculadora.Text = "Calculadora";
             this.rbtCalculadora.ToolTip = "Calculadora";
+            this.rbtCalculadora.Click += new System.EventHandler(this.calc_Click);
+            // 
+            // rpbDados
+            // 
+            this.rpbDados.Items.Add(this.btnD20);
+            this.rpbDados.Items.Add(this.btnD4);
+            this.rpbDados.Items.Add(this.btnD6);
+            this.rpbDados.Items.Add(this.btnD8);
+            this.rpbDados.Items.Add(this.btnD10);
+            this.rpbDados.Items.Add(this.btnD12);
+            this.rpbDados.Items.Add(this.btnD100);
+            this.rpbDados.Items.Add(this.ribbonSeparator2);
+            this.rpbDados.Items.Add(this.btn10p);
+            this.rpbDados.Items.Add(this.ribbonSeparator1);
+            this.rpbDados.Items.Add(this.btnDOutros);
+            this.rpbDados.Text = "Dados";
             // 
             // btnD20
             // 
             this.btnD20.Image = global::Dices.Properties.Resources.d20;
             this.btnD20.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD20.SmallImage")));
             this.btnD20.Text = "D20";
+            this.btnD20.Click += new System.EventHandler(this.btnD20_Click);
             // 
             // btnD4
             // 
@@ -232,11 +249,52 @@
             this.btnDOutros.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnDOutros.SmallImage")));
             this.btnDOutros.Text = "Personalizado";
             // 
+            // rtbHistorico
+            // 
+            this.rtbHistorico.Panels.Add(this.rpnHistorico);
+            this.rtbHistorico.Text = "Histórico";
+            // 
+            // rpnHistorico
+            // 
+            this.rpnHistorico.Text = "Histórico";
+            // 
+            // ribbonTab1
+            // 
+            this.ribbonTab1.Text = "Aventura";
+            // 
+            // ribbonTab2
+            // 
+            this.ribbonTab2.Text = "Anotações";
+            // 
+            // ribbonTab3
+            // 
+            this.ribbonTab3.Text = "Personagens";
+            // 
+            // ribbonTab4
+            // 
+            this.ribbonTab4.Text = "Multimídia";
+            // 
+            // pnPrincipal
+            // 
+            this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnPrincipal.Location = new System.Drawing.Point(0, 145);
+            this.pnPrincipal.Margin = new System.Windows.Forms.Padding(0);
+            this.pnPrincipal.Name = "pnPrincipal";
+            this.pnPrincipal.Size = new System.Drawing.Size(1029, 347);
+            this.pnPrincipal.TabIndex = 1;
+            // 
+            // ribbonOrbMenuItem1
+            // 
+            this.ribbonOrbMenuItem1.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribbonOrbMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem1.Image")));
+            this.ribbonOrbMenuItem1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem1.SmallImage")));
+            this.ribbonOrbMenuItem1.Text = "Configurações";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 492);
+            this.ClientSize = new System.Drawing.Size(1029, 492);
             this.Controls.Add(this.layout);
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
@@ -272,5 +330,13 @@
         private System.Windows.Forms.RibbonSeparator ribbonSeparator1;
         private System.Windows.Forms.RibbonButton btnDOutros;
         private System.Windows.Forms.RibbonSeparator ribbonSeparator2;
+        private System.Windows.Forms.RibbonTab rtbHistorico;
+        private System.Windows.Forms.RibbonPanel rpnHistorico;
+        private System.Windows.Forms.RibbonTab ribbonTab1;
+        private System.Windows.Forms.RibbonTab ribbonTab2;
+        private System.Windows.Forms.RibbonTab ribbonTab3;
+        private System.Windows.Forms.RibbonTab ribbonTab4;
+        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem1;
+        private System.Windows.Forms.Panel pnPrincipal;
     }
 }

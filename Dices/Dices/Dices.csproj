@@ -13,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -28,8 +30,6 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extentions\FormsExtentions.cs" />
     <Compile Include="Forms\frmEditAventura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +152,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Inicio\ucShowNumber.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Inicio\ucShowNumber.Designer.cs">
+      <DependentUpon>ucShowNumber.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\frmEditAventura.resx">
       <DependentUpon>frmEditAventura.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +189,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\Inicio\ucShowNumber.resx">
+      <DependentUpon>ucShowNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Fontes\Open 24 Display St.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -230,7 +243,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FormulaIco.ico" />
     <None Include="Resources\Dice.png" />
     <None Include="Resources\d4.png" />
     <None Include="Resources\d6.png" />
@@ -244,14 +256,7 @@
     <Content Include="RibbonMarkup.xml" />
     <Content Include="Updates.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <FileAssociation Include=".dicf">
-      <Visible>False</Visible>
-      <Description>Fórmula Dice</Description>
-      <Progid>DICES</Progid>
-      <DefaultIcon>FormulaIco.ico</DefaultIcon>
-    </FileAssociation>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
