@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridDados = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridDados)).BeginInit();
             this.SuspendLayout();
@@ -37,12 +38,17 @@
             this.gridDados.AllowUserToAddRows = false;
             this.gridDados.AllowUserToDeleteRows = false;
             this.gridDados.AllowUserToOrderColumns = true;
+            this.gridDados.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gridDados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridDados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.gridDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridDados.Location = new System.Drawing.Point(0, 0);
             this.gridDados.Name = "gridDados";
             this.gridDados.ReadOnly = true;
             this.gridDados.RowHeadersVisible = false;
+            this.gridDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridDados.Size = new System.Drawing.Size(513, 353);
             this.gridDados.TabIndex = 0;
             // 
