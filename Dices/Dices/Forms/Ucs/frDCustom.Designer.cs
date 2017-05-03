@@ -91,6 +91,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Dx Customizado";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frDCustom_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.nudFaces)).EndInit();
             this.ResumeLayout(false);
