@@ -115,5 +115,10 @@ namespace Dices.Forms
             _aventuraContexto.AddOrUpdate(item);
             CarregarItens();
         }
+
+        private void lvAventuras_DoubleClick(object sender, System.EventArgs e)
+        {
+            btnAbrir_Click(sender, e);
+        }
     }
 }

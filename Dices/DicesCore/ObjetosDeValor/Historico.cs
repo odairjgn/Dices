@@ -29,5 +29,10 @@ namespace DicesCore.ObjetosDeValor
             Detalhes = detalhes;
             Valor = valor;
         }
+
+        public override string ToString()
+        {
+            return $"{DataHora.ToString().PadRight(20)}{Valor.ToString().PadRight(20)}{Descricao.PadRight(100)}{Detalhes.PadRight(150)}";
+        }
     }
 }

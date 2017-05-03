@@ -31,27 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.layout = new System.Windows.Forms.TableLayoutPanel();
             this.mainMenu = new System.Windows.Forms.Ribbon();
-            this.menuImportExport = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.menuTrocar = new System.Windows.Forms.RibbonButton();
-            this.menuAjuda = new System.Windows.Forms.RibbonButton();
-            this.menuSair = new System.Windows.Forms.RibbonButton();
-            this.mSobre = new System.Windows.Forms.RibbonButton();
-            this.menuFeedbak = new System.Windows.Forms.RibbonOrbRecentItem();
             this.rtbInicio = new System.Windows.Forms.RibbonTab();
             this.rpnCalc = new System.Windows.Forms.RibbonPanel();
-            this.rbtCalculadora = new System.Windows.Forms.RibbonButton();
             this.rpbDados = new System.Windows.Forms.RibbonPanel();
-            this.btnD20 = new System.Windows.Forms.RibbonButton();
-            this.btnD4 = new System.Windows.Forms.RibbonButton();
-            this.btnD6 = new System.Windows.Forms.RibbonButton();
-            this.btnD8 = new System.Windows.Forms.RibbonButton();
-            this.btnD10 = new System.Windows.Forms.RibbonButton();
-            this.btnD12 = new System.Windows.Forms.RibbonButton();
-            this.btnD100 = new System.Windows.Forms.RibbonButton();
             this.ribbonSeparator2 = new System.Windows.Forms.RibbonSeparator();
-            this.btn10p = new System.Windows.Forms.RibbonButton();
             this.ribbonSeparator1 = new System.Windows.Forms.RibbonSeparator();
-            this.btnDOutros = new System.Windows.Forms.RibbonButton();
             this.rtbHistorico = new System.Windows.Forms.RibbonTab();
             this.rpnHistorico = new System.Windows.Forms.RibbonPanel();
             this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
@@ -59,6 +43,29 @@
             this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
             this.ribbonTab4 = new System.Windows.Forms.RibbonTab();
             this.pnPrincipal = new System.Windows.Forms.Panel();
+            this.rbpExportar = new System.Windows.Forms.RibbonPanel();
+            this.menuImportExport = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.menuTrocar = new System.Windows.Forms.RibbonButton();
+            this.menuAjuda = new System.Windows.Forms.RibbonButton();
+            this.menuSair = new System.Windows.Forms.RibbonButton();
+            this.mSobre = new System.Windows.Forms.RibbonButton();
+            this.menuFeedbak = new System.Windows.Forms.RibbonOrbRecentItem();
+            this.rbtCalculadora = new System.Windows.Forms.RibbonButton();
+            this.btnD20 = new System.Windows.Forms.RibbonButton();
+            this.btnD4 = new System.Windows.Forms.RibbonButton();
+            this.btnD6 = new System.Windows.Forms.RibbonButton();
+            this.btnD8 = new System.Windows.Forms.RibbonButton();
+            this.btnD10 = new System.Windows.Forms.RibbonButton();
+            this.btnD12 = new System.Windows.Forms.RibbonButton();
+            this.btnD100 = new System.Windows.Forms.RibbonButton();
+            this.btn10p = new System.Windows.Forms.RibbonButton();
+            this.btnDOutros = new System.Windows.Forms.RibbonButton();
+            this.rbtnHistorico = new System.Windows.Forms.RibbonButton();
+            this.rbtnLimpar = new System.Windows.Forms.RibbonButton();
+            this.rbtnExpTxt = new System.Windows.Forms.RibbonButton();
+            this.rbtnExpCSV = new System.Windows.Forms.RibbonButton();
+            this.rbtnXML = new System.Windows.Forms.RibbonButton();
+            this.rbtnJson = new System.Windows.Forms.RibbonButton();
             this.ribbonOrbMenuItem1 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.layout.SuspendLayout();
             this.SuspendLayout();
@@ -123,43 +130,6 @@
             this.mainMenu.ThemeColor = System.Windows.Forms.RibbonTheme.Black;
             this.mainMenu.ActiveTabChanged += new System.EventHandler(this.mainMenu_ActiveTabChanged);
             // 
-            // menuImportExport
-            // 
-            this.menuImportExport.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.menuImportExport.Image = ((System.Drawing.Image)(resources.GetObject("menuImportExport.Image")));
-            this.menuImportExport.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuImportExport.SmallImage")));
-            this.menuImportExport.Text = "Exportar/Importar";
-            // 
-            // menuTrocar
-            // 
-            this.menuTrocar.Image = ((System.Drawing.Image)(resources.GetObject("menuTrocar.Image")));
-            this.menuTrocar.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuTrocar.SmallImage")));
-            this.menuTrocar.Text = "Trocar de Aventura";
-            // 
-            // menuAjuda
-            // 
-            this.menuAjuda.Image = ((System.Drawing.Image)(resources.GetObject("menuAjuda.Image")));
-            this.menuAjuda.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuAjuda.SmallImage")));
-            this.menuAjuda.Text = "Ajuda";
-            // 
-            // menuSair
-            // 
-            this.menuSair.Image = ((System.Drawing.Image)(resources.GetObject("menuSair.Image")));
-            this.menuSair.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuSair.SmallImage")));
-            this.menuSair.Text = "Sair";
-            // 
-            // mSobre
-            // 
-            this.mSobre.Image = ((System.Drawing.Image)(resources.GetObject("mSobre.Image")));
-            this.mSobre.SmallImage = ((System.Drawing.Image)(resources.GetObject("mSobre.SmallImage")));
-            this.mSobre.Text = "Sobre...";
-            // 
-            // menuFeedbak
-            // 
-            this.menuFeedbak.Image = ((System.Drawing.Image)(resources.GetObject("menuFeedbak.Image")));
-            this.menuFeedbak.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuFeedbak.SmallImage")));
-            this.menuFeedbak.Text = "Deixe seu feedeback";
-            // 
             // rtbInicio
             // 
             this.rtbInicio.Panels.Add(this.rpnCalc);
@@ -170,14 +140,6 @@
             // 
             this.rpnCalc.Items.Add(this.rbtCalculadora);
             this.rpnCalc.Text = "Atalhos";
-            // 
-            // rbtCalculadora
-            // 
-            this.rbtCalculadora.Image = global::Dices.Properties.Resources.CalculadoraIco;
-            this.rbtCalculadora.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbtCalculadora.SmallImage")));
-            this.rbtCalculadora.Text = "Calculadora";
-            this.rbtCalculadora.ToolTip = "Calculadora";
-            this.rbtCalculadora.Click += new System.EventHandler(this.calc_Click);
             // 
             // rpbDados
             // 
@@ -194,68 +156,16 @@
             this.rpbDados.Items.Add(this.btnDOutros);
             this.rpbDados.Text = "Dados";
             // 
-            // btnD20
-            // 
-            this.btnD20.Image = global::Dices.Properties.Resources.d20;
-            this.btnD20.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD20.SmallImage")));
-            this.btnD20.Text = "D20";
-            this.btnD20.Click += new System.EventHandler(this.btnD20_Click);
-            // 
-            // btnD4
-            // 
-            this.btnD4.Image = global::Dices.Properties.Resources.d4;
-            this.btnD4.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD4.SmallImage")));
-            this.btnD4.Text = "D4";
-            // 
-            // btnD6
-            // 
-            this.btnD6.Image = global::Dices.Properties.Resources.d6;
-            this.btnD6.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD6.SmallImage")));
-            this.btnD6.Text = "D6";
-            // 
-            // btnD8
-            // 
-            this.btnD8.Image = global::Dices.Properties.Resources.d8;
-            this.btnD8.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD8.SmallImage")));
-            this.btnD8.Text = "D8";
-            // 
-            // btnD10
-            // 
-            this.btnD10.Image = global::Dices.Properties.Resources.d10;
-            this.btnD10.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD10.SmallImage")));
-            this.btnD10.Text = "D10";
-            // 
-            // btnD12
-            // 
-            this.btnD12.Image = global::Dices.Properties.Resources.d12;
-            this.btnD12.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD12.SmallImage")));
-            this.btnD12.Text = "D12";
-            // 
-            // btnD100
-            // 
-            this.btnD100.Image = global::Dices.Properties.Resources.d100;
-            this.btnD100.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD100.SmallImage")));
-            this.btnD100.Text = "D100";
-            // 
-            // btn10p
-            // 
-            this.btn10p.Image = global::Dices.Properties.Resources.d10p;
-            this.btn10p.SmallImage = ((System.Drawing.Image)(resources.GetObject("btn10p.SmallImage")));
-            this.btn10p.Text = "D10%";
-            // 
-            // btnDOutros
-            // 
-            this.btnDOutros.Image = global::Dices.Properties.Resources.dx;
-            this.btnDOutros.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnDOutros.SmallImage")));
-            this.btnDOutros.Text = "Personalizado";
-            // 
             // rtbHistorico
             // 
             this.rtbHistorico.Panels.Add(this.rpnHistorico);
+            this.rtbHistorico.Panels.Add(this.rbpExportar);
             this.rtbHistorico.Text = "Histórico";
             // 
             // rpnHistorico
             // 
+            this.rpnHistorico.Items.Add(this.rbtnHistorico);
+            this.rpnHistorico.Items.Add(this.rbtnLimpar);
             this.rpnHistorico.Text = "Histórico";
             // 
             // ribbonTab1
@@ -282,6 +192,170 @@
             this.pnPrincipal.Name = "pnPrincipal";
             this.pnPrincipal.Size = new System.Drawing.Size(1029, 347);
             this.pnPrincipal.TabIndex = 1;
+            // 
+            // rbpExportar
+            // 
+            this.rbpExportar.Items.Add(this.rbtnExpTxt);
+            this.rbpExportar.Items.Add(this.rbtnExpCSV);
+            this.rbpExportar.Items.Add(this.rbtnXML);
+            this.rbpExportar.Items.Add(this.rbtnJson);
+            this.rbpExportar.Text = "Exportar";
+            // 
+            // menuImportExport
+            // 
+            this.menuImportExport.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.menuImportExport.Image = ((System.Drawing.Image)(resources.GetObject("menuImportExport.Image")));
+            this.menuImportExport.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuImportExport.SmallImage")));
+            this.menuImportExport.Text = "Exportar/Importar";
+            this.menuImportExport.Click += new System.EventHandler(this.menuImportExport_Click);
+            // 
+            // menuTrocar
+            // 
+            this.menuTrocar.Image = ((System.Drawing.Image)(resources.GetObject("menuTrocar.Image")));
+            this.menuTrocar.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuTrocar.SmallImage")));
+            this.menuTrocar.Text = "Trocar de Aventura";
+            this.menuTrocar.Click += new System.EventHandler(this.menuTrocar_Click);
+            // 
+            // menuAjuda
+            // 
+            this.menuAjuda.Image = ((System.Drawing.Image)(resources.GetObject("menuAjuda.Image")));
+            this.menuAjuda.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuAjuda.SmallImage")));
+            this.menuAjuda.Text = "Ajuda";
+            this.menuAjuda.Click += new System.EventHandler(this.menuAjuda_Click);
+            // 
+            // menuSair
+            // 
+            this.menuSair.Image = ((System.Drawing.Image)(resources.GetObject("menuSair.Image")));
+            this.menuSair.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuSair.SmallImage")));
+            this.menuSair.Text = "Sair";
+            this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
+            // 
+            // mSobre
+            // 
+            this.mSobre.Image = ((System.Drawing.Image)(resources.GetObject("mSobre.Image")));
+            this.mSobre.SmallImage = ((System.Drawing.Image)(resources.GetObject("mSobre.SmallImage")));
+            this.mSobre.Text = "Sobre...";
+            this.mSobre.Click += new System.EventHandler(this.mSobre_Click);
+            // 
+            // menuFeedbak
+            // 
+            this.menuFeedbak.Image = ((System.Drawing.Image)(resources.GetObject("menuFeedbak.Image")));
+            this.menuFeedbak.SmallImage = ((System.Drawing.Image)(resources.GetObject("menuFeedbak.SmallImage")));
+            this.menuFeedbak.Text = "Deixe seu feedeback";
+            this.menuFeedbak.Click += new System.EventHandler(this.menuFeedbak_Click);
+            // 
+            // rbtCalculadora
+            // 
+            this.rbtCalculadora.Image = global::Dices.Properties.Resources.CalculadoraIco;
+            this.rbtCalculadora.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbtCalculadora.SmallImage")));
+            this.rbtCalculadora.Text = "Calculadora";
+            this.rbtCalculadora.ToolTip = "Calculadora";
+            this.rbtCalculadora.Click += new System.EventHandler(this.calc_Click);
+            // 
+            // btnD20
+            // 
+            this.btnD20.Image = global::Dices.Properties.Resources.d20;
+            this.btnD20.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD20.SmallImage")));
+            this.btnD20.Text = "D20";
+            this.btnD20.Click += new System.EventHandler(this.btnD20_Click);
+            // 
+            // btnD4
+            // 
+            this.btnD4.Image = global::Dices.Properties.Resources.d4;
+            this.btnD4.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD4.SmallImage")));
+            this.btnD4.Text = "D4";
+            this.btnD4.Click += new System.EventHandler(this.btnD4_Click);
+            // 
+            // btnD6
+            // 
+            this.btnD6.Image = global::Dices.Properties.Resources.d6;
+            this.btnD6.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD6.SmallImage")));
+            this.btnD6.Text = "D6";
+            this.btnD6.Click += new System.EventHandler(this.btnD6_Click);
+            // 
+            // btnD8
+            // 
+            this.btnD8.Image = global::Dices.Properties.Resources.d8;
+            this.btnD8.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD8.SmallImage")));
+            this.btnD8.Text = "D8";
+            this.btnD8.Click += new System.EventHandler(this.btnD8_Click);
+            // 
+            // btnD10
+            // 
+            this.btnD10.Image = global::Dices.Properties.Resources.d10;
+            this.btnD10.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD10.SmallImage")));
+            this.btnD10.Text = "D10";
+            this.btnD10.Click += new System.EventHandler(this.btnD10_Click);
+            // 
+            // btnD12
+            // 
+            this.btnD12.Image = global::Dices.Properties.Resources.d12;
+            this.btnD12.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD12.SmallImage")));
+            this.btnD12.Text = "D12";
+            this.btnD12.Click += new System.EventHandler(this.btnD12_Click);
+            // 
+            // btnD100
+            // 
+            this.btnD100.Image = global::Dices.Properties.Resources.d100;
+            this.btnD100.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnD100.SmallImage")));
+            this.btnD100.Text = "D100";
+            this.btnD100.Click += new System.EventHandler(this.btnD100_Click);
+            // 
+            // btn10p
+            // 
+            this.btn10p.Image = global::Dices.Properties.Resources.d10p;
+            this.btn10p.SmallImage = ((System.Drawing.Image)(resources.GetObject("btn10p.SmallImage")));
+            this.btn10p.Text = "D10%";
+            this.btn10p.Click += new System.EventHandler(this.btn10p_Click);
+            // 
+            // btnDOutros
+            // 
+            this.btnDOutros.Image = global::Dices.Properties.Resources.dx;
+            this.btnDOutros.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnDOutros.SmallImage")));
+            this.btnDOutros.Text = "Personalizado";
+            this.btnDOutros.Click += new System.EventHandler(this.btnDOutros_Click);
+            // 
+            // rbtnHistorico
+            // 
+            this.rbtnHistorico.Image = global::Dices.Properties.Resources.Historico;
+            this.rbtnHistorico.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbtnHistorico.SmallImage")));
+            this.rbtnHistorico.Text = "Histórico";
+            this.rbtnHistorico.Click += new System.EventHandler(this.rbtnHistorico_Click);
+            // 
+            // rbtnLimpar
+            // 
+            this.rbtnLimpar.Image = global::Dices.Properties.Resources.HistoricoLimpar;
+            this.rbtnLimpar.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbtnLimpar.SmallImage")));
+            this.rbtnLimpar.Text = "Limpar Histórico";
+            this.rbtnLimpar.Click += new System.EventHandler(this.rbtnLimpar_Click);
+            // 
+            // rbtnExpTxt
+            // 
+            this.rbtnExpTxt.Image = global::Dices.Properties.Resources.TXT;
+            this.rbtnExpTxt.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbtnExpTxt.SmallImage")));
+            this.rbtnExpTxt.Text = "TXT";
+            this.rbtnExpTxt.Click += new System.EventHandler(this.rbtnExpTxt_Click);
+            // 
+            // rbtnExpCSV
+            // 
+            this.rbtnExpCSV.Image = global::Dices.Properties.Resources.CSV;
+            this.rbtnExpCSV.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbtnExpCSV.SmallImage")));
+            this.rbtnExpCSV.Text = "CSV";
+            this.rbtnExpCSV.Click += new System.EventHandler(this.rbtnExpCSV_Click);
+            // 
+            // rbtnXML
+            // 
+            this.rbtnXML.Image = global::Dices.Properties.Resources.Xml;
+            this.rbtnXML.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbtnXML.SmallImage")));
+            this.rbtnXML.Text = "XML";
+            this.rbtnXML.Click += new System.EventHandler(this.rbtnXML_Click);
+            // 
+            // rbtnJson
+            // 
+            this.rbtnJson.Image = global::Dices.Properties.Resources.JSON;
+            this.rbtnJson.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbtnJson.SmallImage")));
+            this.rbtnJson.Text = "JSON";
+            this.rbtnJson.Click += new System.EventHandler(this.rbtnJson_Click);
             // 
             // ribbonOrbMenuItem1
             // 
@@ -338,5 +412,12 @@
         private System.Windows.Forms.RibbonTab ribbonTab4;
         private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem1;
         private System.Windows.Forms.Panel pnPrincipal;
+        private System.Windows.Forms.RibbonButton rbtnHistorico;
+        private System.Windows.Forms.RibbonButton rbtnLimpar;
+        private System.Windows.Forms.RibbonPanel rbpExportar;
+        private System.Windows.Forms.RibbonButton rbtnExpTxt;
+        private System.Windows.Forms.RibbonButton rbtnExpCSV;
+        private System.Windows.Forms.RibbonButton rbtnXML;
+        private System.Windows.Forms.RibbonButton rbtnJson;
     }
 }

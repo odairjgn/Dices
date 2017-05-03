@@ -34,26 +34,26 @@
             this.btnDx = new System.Windows.Forms.Button();
             this.btnDecimal = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
-            this.button46 = new System.Windows.Forms.Button();
+            this.btnD2 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
+            this.btnD4 = new System.Windows.Forms.Button();
             this.btnMenos = new System.Windows.Forms.Button();
             this.btn6 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
+            this.btnD8 = new System.Windows.Forms.Button();
             this.btnMult = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn7 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
+            this.dtnD20 = new System.Windows.Forms.Button();
             this.btnDivid = new System.Windows.Forms.Button();
             this.btnFecharParenteses = new System.Windows.Forms.Button();
             this.btnAbreParenteses = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
+            this.btnD10p = new System.Windows.Forms.Button();
+            this.btnD100 = new System.Windows.Forms.Button();
             this.btnBS = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
@@ -98,26 +98,26 @@
             this.tableLayoutPanel1.Controls.Add(this.btnDx, 3, 12);
             this.tableLayoutPanel1.Controls.Add(this.btnDecimal, 2, 12);
             this.tableLayoutPanel1.Controls.Add(this.btn0, 1, 12);
-            this.tableLayoutPanel1.Controls.Add(this.button46, 0, 12);
+            this.tableLayoutPanel1.Controls.Add(this.btnD2, 0, 12);
             this.tableLayoutPanel1.Controls.Add(this.btn3, 3, 11);
             this.tableLayoutPanel1.Controls.Add(this.btn2, 2, 11);
             this.tableLayoutPanel1.Controls.Add(this.btn1, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.button41, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.btnD4, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.btnMenos, 4, 10);
             this.tableLayoutPanel1.Controls.Add(this.btn6, 3, 10);
             this.tableLayoutPanel1.Controls.Add(this.btn5, 2, 10);
             this.tableLayoutPanel1.Controls.Add(this.btn4, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.button36, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.btnD8, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.btnMult, 4, 9);
             this.tableLayoutPanel1.Controls.Add(this.btn9, 3, 9);
             this.tableLayoutPanel1.Controls.Add(this.btn8, 2, 9);
             this.tableLayoutPanel1.Controls.Add(this.btn7, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.button31, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.dtnD20, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.btnDivid, 4, 8);
             this.tableLayoutPanel1.Controls.Add(this.btnFecharParenteses, 3, 8);
             this.tableLayoutPanel1.Controls.Add(this.btnAbreParenteses, 2, 8);
-            this.tableLayoutPanel1.Controls.Add(this.button27, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.button26, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.btnD10p, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.btnD100, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.btnBS, 4, 7);
             this.tableLayoutPanel1.Controls.Add(this.button24, 3, 7);
             this.tableLayoutPanel1.Controls.Add(this.button23, 2, 7);
@@ -251,21 +251,22 @@
             this.btn0.UseVisualStyleBackColor = false;
             this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
-            // button46
+            // btnD2
             // 
-            this.button46.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button46.FlatAppearance.BorderSize = 0;
-            this.button46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button46.ForeColor = System.Drawing.Color.White;
-            this.button46.Location = new System.Drawing.Point(3, 510);
-            this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(78, 37);
-            this.button46.TabIndex = 48;
-            this.button46.TabStop = false;
-            this.button46.Text = "D2";
-            this.button46.UseVisualStyleBackColor = false;
+            this.btnD2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnD2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnD2.FlatAppearance.BorderSize = 0;
+            this.btnD2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnD2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnD2.ForeColor = System.Drawing.Color.White;
+            this.btnD2.Location = new System.Drawing.Point(3, 510);
+            this.btnD2.Name = "btnD2";
+            this.btnD2.Size = new System.Drawing.Size(78, 37);
+            this.btnD2.TabIndex = 48;
+            this.btnD2.TabStop = false;
+            this.btnD2.Text = "D2";
+            this.btnD2.UseVisualStyleBackColor = false;
+            this.btnD2.Click += new System.EventHandler(this.btnD2_Click);
             // 
             // btn3
             // 
@@ -318,21 +319,22 @@
             this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
-            // button41
+            // btnD4
             // 
-            this.button41.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button41.FlatAppearance.BorderSize = 0;
-            this.button41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button41.ForeColor = System.Drawing.Color.White;
-            this.button41.Location = new System.Drawing.Point(3, 467);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(78, 37);
-            this.button41.TabIndex = 43;
-            this.button41.TabStop = false;
-            this.button41.Text = "D4";
-            this.button41.UseVisualStyleBackColor = false;
+            this.btnD4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnD4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnD4.FlatAppearance.BorderSize = 0;
+            this.btnD4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnD4.ForeColor = System.Drawing.Color.White;
+            this.btnD4.Location = new System.Drawing.Point(3, 467);
+            this.btnD4.Name = "btnD4";
+            this.btnD4.Size = new System.Drawing.Size(78, 37);
+            this.btnD4.TabIndex = 43;
+            this.btnD4.TabStop = false;
+            this.btnD4.Text = "D4";
+            this.btnD4.UseVisualStyleBackColor = false;
+            this.btnD4.Click += new System.EventHandler(this.btnD4_Click);
             // 
             // btnMenos
             // 
@@ -402,21 +404,22 @@
             this.btn4.UseVisualStyleBackColor = false;
             this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
-            // button36
+            // btnD8
             // 
-            this.button36.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button36.FlatAppearance.BorderSize = 0;
-            this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button36.ForeColor = System.Drawing.Color.White;
-            this.button36.Location = new System.Drawing.Point(3, 424);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(78, 37);
-            this.button36.TabIndex = 38;
-            this.button36.TabStop = false;
-            this.button36.Text = "D8";
-            this.button36.UseVisualStyleBackColor = false;
+            this.btnD8.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnD8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnD8.FlatAppearance.BorderSize = 0;
+            this.btnD8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnD8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnD8.ForeColor = System.Drawing.Color.White;
+            this.btnD8.Location = new System.Drawing.Point(3, 424);
+            this.btnD8.Name = "btnD8";
+            this.btnD8.Size = new System.Drawing.Size(78, 37);
+            this.btnD8.TabIndex = 38;
+            this.btnD8.TabStop = false;
+            this.btnD8.Text = "D8";
+            this.btnD8.UseVisualStyleBackColor = false;
+            this.btnD8.Click += new System.EventHandler(this.btnD8_Click);
             // 
             // btnMult
             // 
@@ -486,21 +489,22 @@
             this.btn7.UseVisualStyleBackColor = false;
             this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
-            // button31
+            // dtnD20
             // 
-            this.button31.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button31.FlatAppearance.BorderSize = 0;
-            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button31.ForeColor = System.Drawing.Color.White;
-            this.button31.Location = new System.Drawing.Point(3, 381);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(78, 37);
-            this.button31.TabIndex = 33;
-            this.button31.TabStop = false;
-            this.button31.Text = "D20";
-            this.button31.UseVisualStyleBackColor = false;
+            this.dtnD20.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dtnD20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtnD20.FlatAppearance.BorderSize = 0;
+            this.dtnD20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dtnD20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtnD20.ForeColor = System.Drawing.Color.White;
+            this.dtnD20.Location = new System.Drawing.Point(3, 381);
+            this.dtnD20.Name = "dtnD20";
+            this.dtnD20.Size = new System.Drawing.Size(78, 37);
+            this.dtnD20.TabIndex = 33;
+            this.dtnD20.TabStop = false;
+            this.dtnD20.Text = "D20";
+            this.dtnD20.UseVisualStyleBackColor = false;
+            this.dtnD20.Click += new System.EventHandler(this.dtnD20_Click);
             // 
             // btnDivid
             // 
@@ -553,37 +557,39 @@
             this.btnAbreParenteses.UseVisualStyleBackColor = false;
             this.btnAbreParenteses.Click += new System.EventHandler(this.btnAbreParenteses_Click);
             // 
-            // button27
+            // btnD10p
             // 
-            this.button27.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button27.FlatAppearance.BorderSize = 0;
-            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button27.ForeColor = System.Drawing.Color.White;
-            this.button27.Location = new System.Drawing.Point(87, 338);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(78, 37);
-            this.button27.TabIndex = 29;
-            this.button27.TabStop = false;
-            this.button27.Text = "D%";
-            this.button27.UseVisualStyleBackColor = false;
+            this.btnD10p.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnD10p.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnD10p.FlatAppearance.BorderSize = 0;
+            this.btnD10p.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnD10p.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnD10p.ForeColor = System.Drawing.Color.White;
+            this.btnD10p.Location = new System.Drawing.Point(87, 338);
+            this.btnD10p.Name = "btnD10p";
+            this.btnD10p.Size = new System.Drawing.Size(78, 37);
+            this.btnD10p.TabIndex = 29;
+            this.btnD10p.TabStop = false;
+            this.btnD10p.Text = "D%";
+            this.btnD10p.UseVisualStyleBackColor = false;
+            this.btnD10p.Click += new System.EventHandler(this.btnD10p_Click);
             // 
-            // button26
+            // btnD100
             // 
-            this.button26.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button26.FlatAppearance.BorderSize = 0;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.ForeColor = System.Drawing.Color.White;
-            this.button26.Location = new System.Drawing.Point(3, 338);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(78, 37);
-            this.button26.TabIndex = 28;
-            this.button26.TabStop = false;
-            this.button26.Text = "D100";
-            this.button26.UseVisualStyleBackColor = false;
+            this.btnD100.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnD100.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnD100.FlatAppearance.BorderSize = 0;
+            this.btnD100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnD100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnD100.ForeColor = System.Drawing.Color.White;
+            this.btnD100.Location = new System.Drawing.Point(3, 338);
+            this.btnD100.Name = "btnD100";
+            this.btnD100.Size = new System.Drawing.Size(78, 37);
+            this.btnD100.TabIndex = 28;
+            this.btnD100.TabStop = false;
+            this.btnD100.Text = "D100";
+            this.btnD100.UseVisualStyleBackColor = false;
+            this.btnD100.Click += new System.EventHandler(this.btnD100_Click);
             // 
             // btnBS
             // 
@@ -617,6 +623,7 @@
             this.button24.TabStop = false;
             this.button24.Text = "˟√y";
             this.button24.UseVisualStyleBackColor = false;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button23
             // 
@@ -633,6 +640,7 @@
             this.button23.TabStop = false;
             this.button23.Text = "y˟";
             this.button23.UseVisualStyleBackColor = false;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // btnRigth
             // 
@@ -700,6 +708,7 @@
             this.button19.TabStop = false;
             this.button19.Text = "x%y";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button18
             // 
@@ -716,6 +725,7 @@
             this.button18.TabStop = false;
             this.button18.Text = "trunc";
             this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button17
             // 
@@ -732,6 +742,7 @@
             this.button17.TabStop = false;
             this.button17.Text = " round";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button16
             // 
@@ -748,6 +759,7 @@
             this.button16.TabStop = false;
             this.button16.Text = "|x|";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button15
             // 
@@ -764,6 +776,7 @@
             this.button15.TabStop = false;
             this.button15.Text = "f(x)";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
@@ -780,6 +793,7 @@
             this.button14.TabStop = false;
             this.button14.Text = "?";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button13
             // 
@@ -796,6 +810,7 @@
             this.button13.TabStop = false;
             this.button13.Text = ";";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button12
             // 
@@ -812,6 +827,7 @@
             this.button12.TabStop = false;
             this.button12.Text = "if";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -828,6 +844,7 @@
             this.button11.TabStop = false;
             this.button11.Text = "rnd";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -844,6 +861,7 @@
             this.button10.TabStop = false;
             this.button10.Text = "!=";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -860,6 +878,7 @@
             this.button9.TabStop = false;
             this.button9.Text = "==";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -876,6 +895,7 @@
             this.button8.TabStop = false;
             this.button8.Text = "||";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -892,6 +912,7 @@
             this.button7.TabStop = false;
             this.button7.Text = "&&&&";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -908,6 +929,7 @@
             this.button6.TabStop = false;
             this.button6.Text = "!";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -924,6 +946,7 @@
             this.button5.TabStop = false;
             this.button5.Text = "≥";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -940,6 +963,7 @@
             this.button4.TabStop = false;
             this.button4.Text = "≤";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -956,6 +980,7 @@
             this.button3.TabStop = false;
             this.button3.Text = ">";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -972,6 +997,7 @@
             this.button2.TabStop = false;
             this.button2.Text = "<";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtInput
             // 
@@ -1022,6 +1048,7 @@
             this.button1.TabStop = false;
             this.button1.Text = "...";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ucCalcKeyboard
             // 
@@ -1046,26 +1073,26 @@
         private System.Windows.Forms.Button btnDx;
         private System.Windows.Forms.Button btnDecimal;
         private System.Windows.Forms.Button btn0;
-        private System.Windows.Forms.Button button46;
+        private System.Windows.Forms.Button btnD2;
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button button41;
+        private System.Windows.Forms.Button btnD4;
         private System.Windows.Forms.Button btnMenos;
         private System.Windows.Forms.Button btn6;
         private System.Windows.Forms.Button btn5;
         private System.Windows.Forms.Button btn4;
-        private System.Windows.Forms.Button button36;
+        private System.Windows.Forms.Button btnD8;
         private System.Windows.Forms.Button btnMult;
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn7;
-        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Button dtnD20;
         private System.Windows.Forms.Button btnDivid;
         private System.Windows.Forms.Button btnFecharParenteses;
         private System.Windows.Forms.Button btnAbreParenteses;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button btnD10p;
+        private System.Windows.Forms.Button btnD100;
         private System.Windows.Forms.Button btnBS;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button23;

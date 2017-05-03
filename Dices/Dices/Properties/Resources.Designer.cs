@@ -73,6 +73,16 @@ namespace Dices.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CSV {
+            get {
+                object obj = ResourceManager.GetObject("CSV", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap d10 {
             get {
                 object obj = ResourceManager.GetObject("d10", resourceCulture);
@@ -176,6 +186,75 @@ namespace Dices.Properties {
         internal static System.Drawing.Bitmap dx {
             get {
                 object obj = ResourceManager.GetObject("dx", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream gritopantera {
+            get {
+                return ResourceManager.GetStream("gritopantera", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Historico {
+            get {
+                object obj = ResourceManager.GetObject("Historico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HistoricoLimpar {
+            get {
+                object obj = ResourceManager.GetObject("HistoricoLimpar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ines {
+            get {
+                object obj = ResourceManager.GetObject("Ines", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap JSON {
+            get {
+                object obj = ResourceManager.GetObject("JSON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TXT {
+            get {
+                object obj = ResourceManager.GetObject("TXT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Xml {
+            get {
+                object obj = ResourceManager.GetObject("Xml", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

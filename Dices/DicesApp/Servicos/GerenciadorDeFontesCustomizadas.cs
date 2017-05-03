@@ -9,13 +9,15 @@ namespace DicesApp.Servicos
 {
     public static class GerenciadorDeFontesCustomizadas
     {
-        public const string LCDFonte = "Open 24 Display St.ttf";
+        public const string LCDFonte = "DJB Get Digital.ttf";
+        public const string LEDFonte = "LEDCalculator.ttf";
 
         private static readonly PrivateFontCollection Fontes = new PrivateFontCollection();
 
         private static readonly Dictionary<string, int> FontList = new Dictionary<string, int>()
         {
-            {LCDFonte, 0}
+            {LCDFonte, 0},
+            {LEDFonte, 1 }
         };
 
         public static void LoadFontes()

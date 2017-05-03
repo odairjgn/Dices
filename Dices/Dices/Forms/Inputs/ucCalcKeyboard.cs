@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Dices.Forms.Ucs;
 using DicesApp.ObjetosDeValor;
+using DicesApp.Servicos;
 using DicesCustomControls.Componentes;
 using DicesCustomControls.Extentions;
 
@@ -18,11 +19,21 @@ namespace Dices.Forms.Inputs
         {
             InitializeComponent();
 
+            txtInput.Font = GerenciadorDeFontesCustomizadas.GetFont(GerenciadorDeFontesCustomizadas.LEDFonte, txtInput.Font);
+
+            _fontErro = GerenciadorDeFontesCustomizadas.GetFont(GerenciadorDeFontesCustomizadas.LCDFonte, new Font(new FontFamily("Microsoft Sans Serif"), 14, FontStyle.Italic));
+            _fontNormal =  GerenciadorDeFontesCustomizadas.GetFont(GerenciadorDeFontesCustomizadas.LCDFonte, new Font(new FontFamily("Microsoft Sans Serif"), 30, FontStyle.Bold));
+
+            lbResult.Font = _fontNormal;
+
             _ucDx = new ucDx();
             _dpDx = new DropDownProvider(_ucDx, btnDx);
         }
 
         private bool _errolabel;
+        private Font _fontErro;
+        private Font _fontNormal;
+
         private bool ErrorLabel
         {
             get { return _errolabel; }
@@ -32,12 +43,12 @@ namespace Dices.Forms.Inputs
 
                 if (_errolabel)
                 {
-                    lbResult.Font = new Font(new FontFamily("Microsoft Sans Serif"), 9, FontStyle.Italic);
+                    lbResult.Font = _fontErro;
                     lbResult.ForeColor = Color.Red;
                 }
                 else
                 {
-                    lbResult.Font = new Font(new FontFamily("Microsoft Sans Serif"), 30, FontStyle.Bold);
+                    lbResult.Font = _fontNormal;
                     lbResult.ForeColor = Color.Navy;
                 }
             }
@@ -183,6 +194,141 @@ namespace Dices.Forms.Inputs
                 ErrorLabel = true;
                 lbResult.Text = ex.Message;
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void btnD4_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void btnD8_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void dtnD20_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void btnD100_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void btnD10p_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
+        }
+
+        private void btnD2_Click(object sender, EventArgs e)
+        {
+            new frmNaoImplementado().ShowDialog();
         }
     }
 }

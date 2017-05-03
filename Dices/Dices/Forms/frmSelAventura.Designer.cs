@@ -46,6 +46,7 @@
             this.lvAventuras.Size = new System.Drawing.Size(537, 294);
             this.lvAventuras.TabIndex = 0;
             this.lvAventuras.UseCompatibleStateImageBehavior = false;
+            this.lvAventuras.DoubleClick += new System.EventHandler(this.lvAventuras_DoubleClick);
             // 
             // btnAbrir
             // 
