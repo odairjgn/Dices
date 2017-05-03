@@ -31,26 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.layout = new System.Windows.Forms.TableLayoutPanel();
             this.mainMenu = new System.Windows.Forms.Ribbon();
-            this.rtbInicio = new System.Windows.Forms.RibbonTab();
-            this.rpnCalc = new System.Windows.Forms.RibbonPanel();
-            this.rpbDados = new System.Windows.Forms.RibbonPanel();
-            this.ribbonSeparator2 = new System.Windows.Forms.RibbonSeparator();
-            this.ribbonSeparator1 = new System.Windows.Forms.RibbonSeparator();
-            this.rtbHistorico = new System.Windows.Forms.RibbonTab();
-            this.rpnHistorico = new System.Windows.Forms.RibbonPanel();
-            this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
-            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
-            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
-            this.ribbonTab4 = new System.Windows.Forms.RibbonTab();
-            this.pnPrincipal = new System.Windows.Forms.Panel();
-            this.rbpExportar = new System.Windows.Forms.RibbonPanel();
             this.menuImportExport = new System.Windows.Forms.RibbonOrbMenuItem();
             this.menuTrocar = new System.Windows.Forms.RibbonButton();
             this.menuAjuda = new System.Windows.Forms.RibbonButton();
             this.menuSair = new System.Windows.Forms.RibbonButton();
             this.mSobre = new System.Windows.Forms.RibbonButton();
             this.menuFeedbak = new System.Windows.Forms.RibbonOrbRecentItem();
+            this.rtbInicio = new System.Windows.Forms.RibbonTab();
+            this.rpnCalc = new System.Windows.Forms.RibbonPanel();
             this.rbtCalculadora = new System.Windows.Forms.RibbonButton();
+            this.rpbDados = new System.Windows.Forms.RibbonPanel();
             this.btnD20 = new System.Windows.Forms.RibbonButton();
             this.btnD4 = new System.Windows.Forms.RibbonButton();
             this.btnD6 = new System.Windows.Forms.RibbonButton();
@@ -58,14 +48,24 @@
             this.btnD10 = new System.Windows.Forms.RibbonButton();
             this.btnD12 = new System.Windows.Forms.RibbonButton();
             this.btnD100 = new System.Windows.Forms.RibbonButton();
+            this.ribbonSeparator2 = new System.Windows.Forms.RibbonSeparator();
             this.btn10p = new System.Windows.Forms.RibbonButton();
+            this.ribbonSeparator1 = new System.Windows.Forms.RibbonSeparator();
             this.btnDOutros = new System.Windows.Forms.RibbonButton();
+            this.rtbHistorico = new System.Windows.Forms.RibbonTab();
+            this.rpnHistorico = new System.Windows.Forms.RibbonPanel();
             this.rbtnHistorico = new System.Windows.Forms.RibbonButton();
             this.rbtnLimpar = new System.Windows.Forms.RibbonButton();
+            this.rbpExportar = new System.Windows.Forms.RibbonPanel();
             this.rbtnExpTxt = new System.Windows.Forms.RibbonButton();
             this.rbtnExpCSV = new System.Windows.Forms.RibbonButton();
             this.rbtnXML = new System.Windows.Forms.RibbonButton();
             this.rbtnJson = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
+            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
+            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
+            this.ribbonTab4 = new System.Windows.Forms.RibbonTab();
+            this.pnPrincipal = new System.Windows.Forms.Panel();
             this.ribbonOrbMenuItem1 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.layout.SuspendLayout();
             this.SuspendLayout();
@@ -130,77 +130,6 @@
             this.mainMenu.ThemeColor = System.Windows.Forms.RibbonTheme.Black;
             this.mainMenu.ActiveTabChanged += new System.EventHandler(this.mainMenu_ActiveTabChanged);
             // 
-            // rtbInicio
-            // 
-            this.rtbInicio.Panels.Add(this.rpnCalc);
-            this.rtbInicio.Panels.Add(this.rpbDados);
-            this.rtbInicio.Text = "Inicio";
-            // 
-            // rpnCalc
-            // 
-            this.rpnCalc.Items.Add(this.rbtCalculadora);
-            this.rpnCalc.Text = "Atalhos";
-            // 
-            // rpbDados
-            // 
-            this.rpbDados.Items.Add(this.btnD20);
-            this.rpbDados.Items.Add(this.btnD4);
-            this.rpbDados.Items.Add(this.btnD6);
-            this.rpbDados.Items.Add(this.btnD8);
-            this.rpbDados.Items.Add(this.btnD10);
-            this.rpbDados.Items.Add(this.btnD12);
-            this.rpbDados.Items.Add(this.btnD100);
-            this.rpbDados.Items.Add(this.ribbonSeparator2);
-            this.rpbDados.Items.Add(this.btn10p);
-            this.rpbDados.Items.Add(this.ribbonSeparator1);
-            this.rpbDados.Items.Add(this.btnDOutros);
-            this.rpbDados.Text = "Dados";
-            // 
-            // rtbHistorico
-            // 
-            this.rtbHistorico.Panels.Add(this.rpnHistorico);
-            this.rtbHistorico.Panels.Add(this.rbpExportar);
-            this.rtbHistorico.Text = "Histórico";
-            // 
-            // rpnHistorico
-            // 
-            this.rpnHistorico.Items.Add(this.rbtnHistorico);
-            this.rpnHistorico.Items.Add(this.rbtnLimpar);
-            this.rpnHistorico.Text = "Histórico";
-            // 
-            // ribbonTab1
-            // 
-            this.ribbonTab1.Text = "Aventura";
-            // 
-            // ribbonTab2
-            // 
-            this.ribbonTab2.Text = "Anotações";
-            // 
-            // ribbonTab3
-            // 
-            this.ribbonTab3.Text = "Personagens";
-            // 
-            // ribbonTab4
-            // 
-            this.ribbonTab4.Text = "Multimídia";
-            // 
-            // pnPrincipal
-            // 
-            this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPrincipal.Location = new System.Drawing.Point(0, 145);
-            this.pnPrincipal.Margin = new System.Windows.Forms.Padding(0);
-            this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(1029, 347);
-            this.pnPrincipal.TabIndex = 1;
-            // 
-            // rbpExportar
-            // 
-            this.rbpExportar.Items.Add(this.rbtnExpTxt);
-            this.rbpExportar.Items.Add(this.rbtnExpCSV);
-            this.rbpExportar.Items.Add(this.rbtnXML);
-            this.rbpExportar.Items.Add(this.rbtnJson);
-            this.rbpExportar.Text = "Exportar";
-            // 
             // menuImportExport
             // 
             this.menuImportExport.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
@@ -244,6 +173,17 @@
             this.menuFeedbak.Text = "Deixe seu feedeback";
             this.menuFeedbak.Click += new System.EventHandler(this.menuFeedbak_Click);
             // 
+            // rtbInicio
+            // 
+            this.rtbInicio.Panels.Add(this.rpnCalc);
+            this.rtbInicio.Panels.Add(this.rpbDados);
+            this.rtbInicio.Text = "Inicio";
+            // 
+            // rpnCalc
+            // 
+            this.rpnCalc.Items.Add(this.rbtCalculadora);
+            this.rpnCalc.Text = "Atalhos";
+            // 
             // rbtCalculadora
             // 
             this.rbtCalculadora.Image = global::Dices.Properties.Resources.CalculadoraIco;
@@ -251,6 +191,21 @@
             this.rbtCalculadora.Text = "Calculadora";
             this.rbtCalculadora.ToolTip = "Calculadora";
             this.rbtCalculadora.Click += new System.EventHandler(this.calc_Click);
+            // 
+            // rpbDados
+            // 
+            this.rpbDados.Items.Add(this.btnD20);
+            this.rpbDados.Items.Add(this.btnD4);
+            this.rpbDados.Items.Add(this.btnD6);
+            this.rpbDados.Items.Add(this.btnD8);
+            this.rpbDados.Items.Add(this.btnD10);
+            this.rpbDados.Items.Add(this.btnD12);
+            this.rpbDados.Items.Add(this.btnD100);
+            this.rpbDados.Items.Add(this.ribbonSeparator2);
+            this.rpbDados.Items.Add(this.btn10p);
+            this.rpbDados.Items.Add(this.ribbonSeparator1);
+            this.rpbDados.Items.Add(this.btnDOutros);
+            this.rpbDados.Text = "Dados";
             // 
             // btnD20
             // 
@@ -315,6 +270,18 @@
             this.btnDOutros.Text = "Personalizado";
             this.btnDOutros.Click += new System.EventHandler(this.btnDOutros_Click);
             // 
+            // rtbHistorico
+            // 
+            this.rtbHistorico.Panels.Add(this.rpnHistorico);
+            this.rtbHistorico.Panels.Add(this.rbpExportar);
+            this.rtbHistorico.Text = "Histórico";
+            // 
+            // rpnHistorico
+            // 
+            this.rpnHistorico.Items.Add(this.rbtnHistorico);
+            this.rpnHistorico.Items.Add(this.rbtnLimpar);
+            this.rpnHistorico.Text = "Histórico";
+            // 
             // rbtnHistorico
             // 
             this.rbtnHistorico.Image = global::Dices.Properties.Resources.Historico;
@@ -328,6 +295,14 @@
             this.rbtnLimpar.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbtnLimpar.SmallImage")));
             this.rbtnLimpar.Text = "Limpar Histórico";
             this.rbtnLimpar.Click += new System.EventHandler(this.rbtnLimpar_Click);
+            // 
+            // rbpExportar
+            // 
+            this.rbpExportar.Items.Add(this.rbtnExpTxt);
+            this.rbpExportar.Items.Add(this.rbtnExpCSV);
+            this.rbpExportar.Items.Add(this.rbtnXML);
+            this.rbpExportar.Items.Add(this.rbtnJson);
+            this.rbpExportar.Text = "Exportar";
             // 
             // rbtnExpTxt
             // 
@@ -356,6 +331,31 @@
             this.rbtnJson.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbtnJson.SmallImage")));
             this.rbtnJson.Text = "JSON";
             this.rbtnJson.Click += new System.EventHandler(this.rbtnJson_Click);
+            // 
+            // ribbonTab1
+            // 
+            this.ribbonTab1.Text = "Aventura";
+            // 
+            // ribbonTab2
+            // 
+            this.ribbonTab2.Text = "Anotações";
+            // 
+            // ribbonTab3
+            // 
+            this.ribbonTab3.Text = "Personagens";
+            // 
+            // ribbonTab4
+            // 
+            this.ribbonTab4.Text = "Multimídia";
+            // 
+            // pnPrincipal
+            // 
+            this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnPrincipal.Location = new System.Drawing.Point(0, 145);
+            this.pnPrincipal.Margin = new System.Windows.Forms.Padding(0);
+            this.pnPrincipal.Name = "pnPrincipal";
+            this.pnPrincipal.Size = new System.Drawing.Size(1029, 347);
+            this.pnPrincipal.TabIndex = 1;
             // 
             // ribbonOrbMenuItem1
             // 

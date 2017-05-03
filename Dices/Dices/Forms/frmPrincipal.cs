@@ -13,6 +13,7 @@ using DicesCore;
 using DicesCore.Contexto;
 using DicesCore.Entidades;
 using DicesCore.ObjetosDeValor;
+using DicesCustomControls.Componentes;
 
 namespace Dices.Forms
 {
@@ -21,6 +22,8 @@ namespace Dices.Forms
         private Repositorio<Aventura> _aventuraRepositorio;
 
         private Aventura _aventura;
+        
+        private frDCustom _fdCustom;
 
         private ucShowNumber ucShowNumber = new ucShowNumber();
         private ucHistorico ucHistorico = new ucHistorico();
@@ -32,6 +35,14 @@ namespace Dices.Forms
             _aventuraRepositorio = new Repositorio<Aventura>(Global.Contexto);
             _aventura = _aventuraRepositorio.Get(idAventura);
             mainMenu.Dock = DockStyle.Fill;
+        }
+
+        private void _dCustom_OkClicado(int valors)
+        {
+            var valor = ProcessadorDeFormulas.Sortear(valors);
+            ucShowNumber.SetUserControl(pnPrincipal);
+            ucShowNumber.SetValue(valor);
+            Global.Historico.Add(new Historico($"D{valors} (Personalizado)", valor, "Lançamento avulso personalizado"));
         }
 
         private void frmPrincipal_Load(object sender, System.EventArgs e)
@@ -57,7 +68,7 @@ namespace Dices.Forms
             var valor = ProcessadorDeFormulas.Sortear(20);
             ucShowNumber.SetUserControl(pnPrincipal);
             ucShowNumber.SetValue(valor);
-            Global.Historico.Add(new Historico("D20", valor, ""));
+            Global.Historico.Add(new Historico("D20", valor, "Lançamento avulso"));
         }
 
         private void mainMenu_ActiveTabChanged(object sender, EventArgs e)
@@ -73,7 +84,7 @@ namespace Dices.Forms
             var valor = ProcessadorDeFormulas.Sortear(4);
             ucShowNumber.SetUserControl(pnPrincipal);
             ucShowNumber.SetValue(valor);
-            Global.Historico.Add(new Historico("D4", valor, ""));
+            Global.Historico.Add(new Historico("D4", valor, "Lançamento avulso"));
         }
 
         private void btnD6_Click(object sender, EventArgs e)
@@ -81,7 +92,7 @@ namespace Dices.Forms
             var valor = ProcessadorDeFormulas.Sortear(6);
             ucShowNumber.SetUserControl(pnPrincipal);
             ucShowNumber.SetValue(valor);
-            Global.Historico.Add(new Historico("D6", valor, ""));
+            Global.Historico.Add(new Historico("D6", valor, "Lançamento avulso"));
         }
 
         private void btnD8_Click(object sender, EventArgs e)
@@ -89,7 +100,7 @@ namespace Dices.Forms
             var valor = ProcessadorDeFormulas.Sortear(8);
             ucShowNumber.SetUserControl(pnPrincipal);
             ucShowNumber.SetValue(valor);
-            Global.Historico.Add(new Historico("D8", valor, ""));
+            Global.Historico.Add(new Historico("D8", valor, "Lançamento avulso"));
         }
 
         private void btnD10_Click(object sender, EventArgs e)
@@ -97,7 +108,7 @@ namespace Dices.Forms
             var valor = ProcessadorDeFormulas.Sortear(10);
             ucShowNumber.SetUserControl(pnPrincipal);
             ucShowNumber.SetValue(valor);
-            Global.Historico.Add(new Historico("D10", valor, ""));
+            Global.Historico.Add(new Historico("D10", valor, "Lançamento avulso"));
         }
 
         private void btnD12_Click(object sender, EventArgs e)
@@ -105,7 +116,7 @@ namespace Dices.Forms
             var valor = ProcessadorDeFormulas.Sortear(12);
             ucShowNumber.SetUserControl(pnPrincipal);
             ucShowNumber.SetValue(valor);
-            Global.Historico.Add(new Historico("D12", valor, ""));
+            Global.Historico.Add(new Historico("D12", valor, "Lançamento avulso"));
         }
 
         private void btnD100_Click(object sender, EventArgs e)
@@ -113,22 +124,36 @@ namespace Dices.Forms
             var valor = ProcessadorDeFormulas.Sortear(100);
             ucShowNumber.SetUserControl(pnPrincipal);
             ucShowNumber.SetValue(valor);
-            Global.Historico.Add(new Historico("D10", valor, ""));
+            Global.Historico.Add(new Historico("D10", valor, "Lançamento avulso"));
         }
 
         private void btn10p_Click(object sender, EventArgs e)
         {
-            new frmNaoImplementado().ShowDialog();
+            var valor = ProcessadorDeFormulas.Sortear(10);
+            valor = (valor - 1) * 10;
+            ucShowNumber.SetUserControl(pnPrincipal);
+            ucShowNumber.SetValue(valor);
+            Global.Historico.Add(new Historico("D10%", valor, "Lançamento avulso"));
         }
 
         private void btnDOutros_Click(object sender, EventArgs e)
         {
-            new frmNaoImplementado().ShowDialog();
-        }
+            var fr = Application.OpenForms.Cast<Form>().FirstOrDefault(f => f is frDCustom);
+
+            if (fr == null)
+            {
+                _fdCustom = new frDCustom();
+                _fdCustom.OkClicado += _dCustom_OkClicado;
+                _fdCustom.Show();
+                return;
+            }
+
+            fr.Visible = !fr.Visible;
+        }   
 
         private void mSobre_Click(object sender, EventArgs e)
         {
-
+            new frmNaoImplementado().ShowDialog();
         }
 
         private void menuSair_Click(object sender, EventArgs e)
@@ -171,9 +196,9 @@ namespace Dices.Forms
 
         private void rbtnExpTxt_Click(object sender, EventArgs e)
         {
-            var sfd = new SaveFileDialog() {Filter = "*.txt|*.txt"};
+            var sfd = new SaveFileDialog() { Filter = "*.txt|*.txt" };
 
-            if(sfd.ShowDialog() != DialogResult.OK) return;
+            if (sfd.ShowDialog() != DialogResult.OK) return;
 
             try
             {

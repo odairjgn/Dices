@@ -114,6 +114,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSelAventura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aventura";
             this.Load += new System.EventHandler(this.frmSelAventura_Load);
             this.ResumeLayout(false);

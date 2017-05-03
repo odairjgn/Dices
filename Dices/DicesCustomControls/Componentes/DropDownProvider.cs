@@ -11,6 +11,7 @@ namespace DicesCustomControls.Componentes
         private readonly Timer _timer;
         private readonly int _timeOut;
         private int _cronometro;
+        private Control _ancora;
 
         public event EventHandler TimeOut;
         public event EventHandler DropDownAbriu;
@@ -20,6 +21,7 @@ namespace DicesCustomControls.Componentes
         {
             _dropDownControl = new DropDownControl() { Visible = false };
             _dropDownControl.Parent = ancora;
+            _ancora = ancora;
             _dropDownControl.InitializeDropDown(container);
             _cronometro = 0;
             _timeOut = segundosTimeOut;
