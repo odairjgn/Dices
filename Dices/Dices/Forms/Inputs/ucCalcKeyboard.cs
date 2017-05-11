@@ -195,12 +195,7 @@ namespace Dices.Forms.Inputs
                 lbResult.Text = ex.Message;
             }
         }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
+        
         private void btnD4_Click(object sender, EventArgs e)
         {
             new frmNaoImplementado().ShowDialog();
@@ -256,77 +251,7 @@ namespace Dices.Forms.Inputs
             new frmNaoImplementado().ShowDialog();
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            new frmNaoImplementado().ShowDialog();
-        }
-
-        private void btnD2_Click(object sender, EventArgs e)
+       private void btnD2_Click(object sender, EventArgs e)
         {
             new frmNaoImplementado().ShowDialog();
         }

@@ -13,7 +13,6 @@ using DicesCore;
 using DicesCore.Contexto;
 using DicesCore.Entidades;
 using DicesCore.ObjetosDeValor;
-using DicesCustomControls.Componentes;
 
 namespace Dices.Forms
 {
@@ -56,6 +55,7 @@ namespace Dices.Forms
             if (Application.OpenForms.Cast<Form>().Any(f => f is frmCalc))
             {
                 var form = Application.OpenForms.Cast<Form>().First(f => f is frmCalc);
+                form.Restore();
                 form.Focus();
                 return;
             }
